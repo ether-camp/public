@@ -1,6 +1,7 @@
-# public
 
+# CryptoCamp Reputation System
 
+# motivation 
 # actors 
 # problems 
 # structure
