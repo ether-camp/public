@@ -1,5 +1,5 @@
 
-# CryptoCamp Reputation System
+# Reputation System for crypto.camp 
 
 ###### motivation 
 ###### actors 
