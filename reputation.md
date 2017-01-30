@@ -24,3 +24,5 @@ Last discussion to organize:
    b. how to prevent fake projects to submit? - possilbe that by approving project submissions.
    
 5. User karma is the power to upvote projects
+
+6. PoV - Proove of Value - submitted work to the VA: like submitted review that was recognized by project.
