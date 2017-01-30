@@ -22,3 +22,5 @@ Last discussion to organize:
 4. The quality of content is validated by projects (we can call it - reveiw recognision)
    a. projects care about their reputation - will not publicly promote bad reviews 
    b. how to prevent fake projects to submit? - possilbe that by approving project submissions.
+   
+5. User karma is the power to upvote projects
