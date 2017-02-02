@@ -119,7 +119,7 @@ Speaking of implementation of this system it looks that best option will be plug
 All contract data is open, so any user is able to analyze the interactions between actors. External social graph analyzing tool can be a good help for an ordinary user who wants to see if there are exist evidences of unfair interaction. E.g. user can see if there are sybil clusters and who is a owner of this cluster. None of this tools can be a automated judge which changes some user karma, but it may advise to do so. 
 
 ===
-**Points to think about 
 
+#### Points to think about 
 
-Projects may invite reviewers setting bounty pay for each review 
+- [ ] Projects may invite reviewers setting bounty pay for each review 
