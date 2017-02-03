@@ -133,3 +133,4 @@ All contract data is open, so any user is able to analyze the interactions betwe
 #### Points to think about 
 
 - [ ] Projects may invite reviewers setting bounty pay for each review 
+- [ ] Under the review specipy users that upvoted and are using deposits - (find name maybe shamans )  
