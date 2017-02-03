@@ -111,7 +111,7 @@ Project reviews suppose to be a mechanism which will help to accumulate initial 
 - *Should there be overall karma daily limit? Can there be some attack on it if many bots drain all the daily karma?*
 - *First review for the particular project can give more karma. It will stimulate to give the reviews for all projects.*
 
- (*) **Review Recognition** - We propose to give project option to recognize the review. Review recognition doesn't say that 
+ _**Review Recognition** - We propose to give project option to recognize the review. Review recognition doesn't say that 
  the project agrees with it but it gives some mechanism to encourage reviewers to be constructive in their critics. *todo: - review recognition should be rewarded in karma or in hackergold*
 
 #### Notes on technical implementation
