@@ -138,3 +138,4 @@ All contract data is open, so any user is able to analyze the interactions betwe
 
 - [ ] Projects may invite reviewers setting bounty pay for each review 
 - [ ] Under the review specipy users that upvoted and are using deposits - (find name maybe shamans )  
+- [ ] Consider user activity as additional param with karma gain.
