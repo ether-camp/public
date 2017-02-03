@@ -65,9 +65,8 @@ Another way to prevent such attack is rewarding upvotes for the good content. If
 
 
 Additional options: 
-- Social accont link can be some prove of your identity, so it will give you **+5%** to karma grow per each linked account with more than 100 followers.
+- Social accont link can be some prove of your identity, so it will give you *+5%* to karma grow per each linked account with more than 100 followers.
 - Karma growth can be boosted during the first weeks or months after the system launch to help the community grow more intensively.
-- 
 
 **HKG deposit*
 
