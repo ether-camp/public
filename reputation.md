@@ -40,6 +40,8 @@ Second season of hack.ether.camp was using the links to social accounts as prima
 If we will require more sophisticated proof of identity and the price will increase up to 10 USD, attacker will need to pay around 1500 USD to perform his attack.
 We need to determine if sybil attack price is high enough.
 
+(*todo: the params for all karma related questions can be changed once a time frame let's say each 200k blocks *)
+
 Also, most of the votes for the top camps were given by users which were registered at less then one day before vote. Obviously, most of them were affilated with project in some way. Such way of voting helps to win heavily promoted camps which are not always the best. So, we need to put some barrier for the newcomers. They have to prove their potential value for the community before receiving voting rights.
 
 #### Karma gain system
