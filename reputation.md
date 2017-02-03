@@ -108,7 +108,8 @@ All the reviews can recieve normal votes from the community after the approval l
 
 Project reviews suppose to be a mechanism which will help to accumulate initial karma value by community new members. 
 
-*Should there be overall karma daily limit? Can there be some attack on it if many bots drain all the daily karma?
+*Should there be overall karma daily limit? Can there be some attack on it if many bots drain all the daily karma?*
+*First review for the particular project can give more karma. It will stimulate to give the reviews for all projects.*
 
 ##### Notes on technical implementation
 Speaking of implementation of this system it looks that best option will be pluggable contracts system. All the karma and kudos gain coefficients should be stored in separate structures. System should be changeable by submitting proposals which can be accepted or declined by the community. Approved proposal will be inserted in an array of proposals. Proporsal can be removed from an array by similiar procedure.
