@@ -29,7 +29,7 @@ Also, every user, maybe after some preconditions, should be able to review proje
 - Vote
 - Kudos
 
-##### problems to solve
+#### Problems to solve
 
 Second season of hack.ether.camp was using the links to social accounts as primary prove of identity. Using the platforms like microworkers.com camp owners could create bot-like voting accounts for 0.5-1 USD each. Let's take that we need sybil cloud size larger then than half of honest voting community.
 If we will require more sophisticated proof of identity and the price will increase up to 10 USD, attacker will need to pay around 1500 USD to perform his attack.
@@ -37,7 +37,7 @@ We need to determine if sybil attack price is high enough.
 
 Also, most of the votes for the top camps were given by users which were registered at less then one day before vote. Obviously, most of them were affilated with project in some way. Such way of voting helps to win heavily promoted camps which are not always the best. So, we need to put some barrier for the newcomers. They have to prove their potential value for the community before receiving voting rights.
 
-##### Karma gain system
+#### Karma gain system
 
 Statuses:
 - 1. Newcomer, karma 0-99, max gain daily 20.
@@ -68,7 +68,7 @@ Additional options:
 - Social accont link can be some prove of your identity, so it will give you *+5%* to karma grow per each linked account with more than 100 followers.
 - Karma growth can be boosted during the first weeks or months after the system launch to help the community grow more intensively.
 
-**HKG deposit*
+#### HKG deposit
 
 * need to be double checked, because boosting karma growth by deposit could help sybils creation in some circumstances
 
@@ -84,25 +84,25 @@ while the 2^a depends on HKG you deposit
 - 200,000HKG => a=4
 - 1M  => a=5
 
-**Hide button*
+#### Hide button
 
 If voter considers that some content is spam or offensive, he can press 'Hide' button, so he will not see this comment or post in the future. After getting *(voters karma) / 25 == 100* the author of content gets a cooldown for karma acquiring for 1 day. (Effect can be worse if he will get more 'spam' flags).
 
-##### Content posting and upvoting rewards
+#### Content posting and upvoting rewards
 
 Good content should be rewarded. For every 10 upvotes user receives 1 HKG to his address.
 
-##### Gas payers
+#### Gas payers
 
 Voters are gas payers. When user becames voter he receives some Ether to cast, for example, 10 upvotes. If he generates good content afterwards, he receives HKG and then can exchange it for Ether to give more votes.
 
-##### Kudos as karma function
+#### Kudos as karma function
 
 Kudos amount is a linear function from karma.
 
 `kudos = karma / 10`
 
-##### Project reviews
+#### Project reviews
 Every user can write a review to any published project. Any owner of this project can approve the review and make it visible to other community members (*should the review be hidden before the approve or there should be another tab for unapproved reviews?*). An author of the review receives some fixed amount of karma in the case of approve. It can be max daily amount for a newcomer, 20 karma.
 All the reviews can recieve normal votes from the community after the approval like any other post or comment.
 
@@ -111,7 +111,7 @@ Project reviews suppose to be a mechanism which will help to accumulate initial 
 - *Should there be overall karma daily limit? Can there be some attack on it if many bots drain all the daily karma?*
 - *First review for the particular project can give more karma. It will stimulate to give the reviews for all projects.*
 
-##### Notes on technical implementation
+#### Notes on technical implementation
 Speaking of implementation of this system it looks that best option will be pluggable contracts system. All the karma and kudos gain coefficients should be stored in separate structures. System should be changeable by submitting proposals which can be accepted or declined by the community. Approved proposal will be inserted in an array of proposals. Proporsal can be removed from an array by similiar procedure.
 
 **External tools**
