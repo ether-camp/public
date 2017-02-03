@@ -1,33 +1,33 @@
 
 # Reputation System for crypto.camp 
 
-#### motivation 
+#### Motivation 
 The main goal of system is to create a community of experts which votes for the projects or any other content is trustful. All symmetric reputation systems are proven to be sybil-vulnerable. So we need to make a sybil creation unaffordably expensive or use some sybil-protection mechanisms.
 
-#### actors 
+#### Actors 
 One of the mechanisms to create sybil-proof system is to set some seed. We need an initial reputation which is set to some actors whose identity is proven.
 Such actors can be project owners and some kernel of community.
 Every actor should be able to post some content, both articles or comments. Their reputation or karma depends on votes given by other actors to the posted content.
 Also, every user, maybe after some preconditions, should be able to review projects and get an approves from the project owners.
 
-#### problems 
+#### Problems 
    -	Sybil attack
    -	Allowance to vote to users who are affilated with some project or content author. How to distinguish opinion from biased vote?
    -	More sophisticated sybil-attack, where sybils are reposting good comments or posts
    
-#### structure
+#### Structure
 - Ways to prove an identity.
 - Karma growing curve.
 
 
-#### terms 
+#### Terms 
 *describe each*
 
-- Project (camp)
-- User
-- Karma
-- Vote
-- Kudos
+- Project (camp) - idea is the essence of innovation, the idea that seek to meet the reality is a project. 
+- User - anybody who is logged in to the system
+- Karma - points attached to some user identity to depict his reputation in the system. 
+- Vote - 
+- Kudos - 
 
 #### Problems to solve
 
