@@ -15,8 +15,10 @@ Also, every user, maybe after some preconditions, should be able to review proje
 
 #### Problems 
    -	Sybil attack
-   -	Allowance to vote to users who are affilated with some project or content author. How to distinguish opinion from biased vote?
+   -	
+      Allowance to vote to users who are affilated with some project or content author. How to distinguish opinion from biased vote?
    -	More sophisticated sybil-attack, where sybils are reposting good comments or posts
+   *todo: how prove of karma gain can be used to identify copy pasters?*
    
 #### Structure
 - Ways to prove an identity.
