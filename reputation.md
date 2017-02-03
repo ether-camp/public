@@ -72,6 +72,8 @@ Growing of sybils can be made too slow by additional constraints. Which can be:
 - There can be activity coefficient which will reward constantly high activity, like +2% to karma if there were upvoted content in the last days, up to 10%, or decrease up to 10% if there was no activity in last 5 days.
 - After 3 days in a row of upvoting specific person by another specific person there should be cooldown for 1 or 2 days. So one user cannot be upvoted too much by single voter or even elder. 
 
+( *to consider if the 3 days restriction wont harm the constructive behaiviour* )
+
 Another way to prevent such attack is rewarding upvotes for the good content. If some content which you've upvoted then was heavily promoted by other users you also receive some additional karma.
 
 
