@@ -5,10 +5,13 @@
 The main goal of system is to create a community of experts which votes for the projects or any other content is trustful. All symmetric reputation systems are proven to be sybil-vulnerable. So we need to make a sybil creation unaffordably expensive or use some sybil-protection mechanisms.
 
 #### Actors 
-One of the mechanisms to create sybil-proof system is to set some seed. We need an initial reputation which is set to some actors whose identity is proven.
-Such actors can be project owners and some kernel of community.
+One of the mechanisms to create sybil-proof system is to set some seed. We need an initial reputation which is set to some actors whose identity is proven. Such actors can be project owners and some kernel of community.
 Every actor should be able to post some content, both articles or comments. Their reputation or karma depends on votes given by other actors to the posted content.
 Also, every user, maybe after some preconditions, should be able to review projects and get an approves from the project owners.
+
+*todo: which power the priveledge user has, how regular user turn to be priviledged*
+
+
 
 #### Problems 
    -	Sybil attack
