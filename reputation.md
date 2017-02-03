@@ -51,6 +51,7 @@ Statuses:
 - 2. Voter, karma 100-5000, can vote for the projects and content, max gain daily 100.
 - 3. Elder, karma >5000, can also downvote content or even punish the untrustful users. Karma >5000 cannot affect your project voting power, it's only applyable to content moderation. 
 ( *todo: maybe punisment by not downvote buy by some remark* )
+( *todo: find name levels for different ranks* ) 
 
 *Should there be a daily upvote limit which can be done by particular user?
 
