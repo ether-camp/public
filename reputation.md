@@ -7,10 +7,13 @@ It was a system with minimal constraints, but vulnerable to sybil attacks as lon
 We, as authors of the platform, want to change it. Loudest projects are not always the best. So, let's the innovative ideas and implementations win.
 
 ## Terms
-- Karma - points attached to some user identity to depict his reputation in the system. 
-- Kudos - voting power of user. Can be calculated as a linear function of *karma*.
+- Karma - points attached to some user identity to depict his reputation in the system
+- Kudos - voting power of user. Can be calculated as a linear function of *karma*
+- User - anybody who is logged in to the system
+- Project (camp) - idea is the essence of innovation, the idea that seek to meet the reality is a project
+- Vote - transaction where user gives some of his available kudos to the selected project
 
-#### Motivation 
+## Motivation 
 The main goal of system is to create a community of experts which votes for the projects or any other content is trustful. All symmetric reputation systems are proven to be sybil-vulnerable. So we need to make a sybil creation unaffordably expensive or use some sybil-protection mechanisms.
 
 #### Actors 
@@ -34,14 +37,6 @@ Also, every user, maybe after some preconditions, should be able to review proje
 - Karma growing curve.
 
 
-#### Terms 
-*describe each*
-
-- Project (camp) - idea is the essence of innovation, the idea that seek to meet the reality is a project. 
-- User - anybody who is logged in to the system
-- Karma - points attached to some user identity to depict his reputation in the system. 
-- Vote - 
-- Kudos - 
 
 #### Problems to solve
 
