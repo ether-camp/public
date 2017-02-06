@@ -7,8 +7,8 @@ It was a system with minimal constraints, but vulnerable to sybil attacks as lon
 We, as authors of the platform, want to change it. Loudest projects are not always the best. So, let's the innovative ideas and implementations win.
 
 ## Terms
-Karma - points attached to some user identity to depict his reputation in the system. 
-Kudos - voting power of user. Can be calculated as a linear function of *karma*.
+- Karma - points attached to some user identity to depict his reputation in the system. 
+- Kudos - voting power of user. Can be calculated as a linear function of *karma*.
 
 #### Motivation 
 The main goal of system is to create a community of experts which votes for the projects or any other content is trustful. All symmetric reputation systems are proven to be sybil-vulnerable. So we need to make a sybil creation unaffordably expensive or use some sybil-protection mechanisms.
