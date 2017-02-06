@@ -1,6 +1,15 @@
 
 # Reputation System for crypto.camp 
 
+## Preface
+hack.ether.camp is a platform which held a virtual accelerator during November and December 2016. Every person was able to support projects with both *Kudos* and *Hacker Gold (HKG)*. *Kudos* were a voting power of a system participant. Any registered person had 10 *Kudos* and they could have up to 210 *Kudos* after linking 2 active social accounts.
+It was a system with minimal constraints, but vulnerable to sybil attacks as long as to massive voting by people who registered just before giving the vote. One of the top camps received more than 87% of the overall votes from newcomers. It means that a lot of voters don't want to choose the best project carefully. They don't want to compare and to produce some value for the community by giving fair reviews and some constructive critics.
+We, as authors of the platform, want to change it. Loudest projects are not always the best. So, let's the innovative ideas and implementations win.
+
+## Terms
+Karma - points attached to some user identity to depict his reputation in the system. 
+Kudos - voting power of user. Can be calculated as a linear function of *karma*.
+
 #### Motivation 
 The main goal of system is to create a community of experts which votes for the projects or any other content is trustful. All symmetric reputation systems are proven to be sybil-vulnerable. So we need to make a sybil creation unaffordably expensive or use some sybil-protection mechanisms.
 
