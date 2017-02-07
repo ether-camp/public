@@ -34,11 +34,11 @@ Every participant of the system can create a content which can be rated by users
 Every actor has a role depending on his karma amount. The role is also determines maximal amount of karma which can be received for one day.
 The roles are:
 
-`
-- 1. Newcomer, karma 0-99, max gain daily 20.
-- 2. Voter, karma 100-5000, can vote for the projects and content, max gain daily 100.
-- 3. Elder, karma >5000, can also downvote content or even punish the untrustful users. Karma >5000 cannot affect your project voting power, it's only applyable to content moderation. 
-`
+```
+- Newcomer, karma 0-99, max gain daily 20.
+- Voter, karma 100-5000, can vote for the projects and content, max gain daily 100.
+- Elder, karma >5000, can also have some moderation rights.
+```
 
 ( *todo: find name levels for different ranks* ) 
 ( *Should there be a daily upvote limit which can be done by particular user? )
@@ -148,6 +148,9 @@ while the 2^a depends on HKG you deposit
 #### Hide button
 
 If voter considers that some content is spam or offensive, he can press 'Hide' button, so he will not see this comment or post in the future. After getting *(voters karma) / 25 == 100* the author of content gets a cooldown for karma acquiring for 1 day. (Effect can be worse if he will get more 'spam' flags).
+
+
+*Karma >5000 cannot affect actor's project voting power, it's only applyable to content moderation. *
 
 #### Content posting and upvoting rewards
 
