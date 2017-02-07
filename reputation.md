@@ -115,6 +115,12 @@ All contract data is open, so any user is able to analyze the interactions betwe
 
 ===
 
+## Known Attacks
+
+*Whitewashing* - An entity may acuire a new user and start over with the new reputation list
+*Incorectly Reported Feedback* - Enitties may not report feedback or may not report it honestly
+*Phantom Feedback* - Feedback provided by fake enities a.k.a sybils created for the sole purpose of providing such phantom feedback
+
 ## Points to think about 
 
 - [ ] Projects may invite reviewers setting bounty pay for each review 
