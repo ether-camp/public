@@ -25,7 +25,7 @@ All symmetric reputation systems are proven to be sybil-vulnerable [1]. So we ne
 We are creating asymetric reputational function. Therefore, we need to designate some actors subset as trustful and give them rights to rate activity of other actors and reward valuable community members with trustful status.
 Every participant of the system can create a content which can be rated by users with high enough karma. When an author of the comment or post receives some upvotes for his content, he receives karma depending on formula:
 
-`(voter karma) / a; where *a* is a coefficient which can be changed in future. a == 25 on the start.`
+`received_karma == (voter_karma) / a`, where *a* is a coefficient which can be changed in future. a == 25 on the start.
 
 In order to create an initial kernel of trustful users we can give some karma to actors at our discretion. Along with this or istead of it we can delegate initial karma granting function to the owners of the projects.
 
@@ -42,8 +42,6 @@ Project reviews suppose to be a mechanism which will help to accumulate initial 
  the project agrees with it but it gives some mechanism to encourage reviewers to be constructive in their critics. *todo: - review recognition should be rewarded in karma or in hackergold*
  
  
-
-`Karma gain formula: (voter karma) / 25`
 
 
 Statuses:
