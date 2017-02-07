@@ -31,7 +31,7 @@ Every participant of the system can create a content which can be rated by users
 
 ### Actors roles
 
-Every actor has a role depending on his karma amount. The role is also determines maximal amount of karma which can be received for one day.
+Every actor has a role depending on his karma amount. The role is also determines maximal amount of karma which can be received by actor for one day.
 The roles are:
 
 ```
@@ -40,48 +40,29 @@ The roles are:
 - Elder, karma >5000, can also have some moderation rights.
 ```
 
-( *todo: find name levels for different ranks* ) 
-( *Should there be a daily upvote limit which can be done by particular user? )
+Every normal person starts with 0 karma. It should be quite hard to get a voter status, because newcomers cannot harm the system badly. They only can create a number of spam posts which can be easily hidden by other users if they like. 
+
+- ( *TODO: find name levels for different ranks* ) 
+- ( *TODO: Determine a daily upvote limit which can be done by particular actor* )
 
 ### Initial karma distribution and project reviews
 In order to create an initial kernel of trustful users we can give some karma to actors at our discretion. Along with this or istead of it we can delegate initial karma granting function to the owners of the projects.
-Every user can write a review for any published project. Any owner of this project can *recognize* the review and make it visible to other community members (*TODO should the review be hidden before the approve or there should be another tab for unapproved reviews?*). An author of the review receives some fixed amount of karma in the case of approve. It can be max daily amount for a newcomer.
-All the reviews can recieve normal votes from the community after the approval like any other post or comment.
+Project reviews supposed to be a mechanism which will help to accumulate initial karma value by the community new members. Every user can write a review for any published project. We propose to give the project an option to recognize the review. Review recognition doesn't say that the project agrees with it but it gives some mechanism to encourage reviewers to be constructive in their critics. Any owner of this project can *recognize* the review and make it visible to other community members.
+First review for the particular project can give more karma. It will stimulate to give the reviews for all projects.
 
-Project reviews supposed to be a mechanism which will help to accumulate initial karma value by community new members. 
+(*TODO should the review be hidden before the approve or should there be another tab for unapproved reviews?*). 
 
-- *Should there be overall karma daily limit? Can there be some attack on it if many bots drain all the daily karma?*
-- *First review for the particular project can give more karma. It will stimulate to give the reviews for all projects.*
+An author of the review receives some fixed amount of karma in the case of *recognition*. It can be max daily amount for a *newcomer*. All the reviews can recieve normal votes from the community after the approval like any other post or comment.
 
- _**Review Recognition** - We propose to give project option to recognize the review. Review recognition doesn't say that 
- the project agrees with it but it gives some mechanism to encourage reviewers to be constructive in their critics. *todo: - review recognition should be rewarded in karma or in hackergold*
- 
- 
+### Creating a sybil-proof system
+Main problem here: any voter can decide to start growing an army of sybils, because he has a right to upvote. He cannot vote for himself, but he needs the reasons to give votes fairly and not for his sybils. There are some ways to prevent sybil attacks in this scheme. 
 
-
-
-( *todo: maybe punisment by not downvote buy by some remark* )
-
-
-
-
-
-Every normal person starts with 0 karma. It should be quite hard to get a voter status, because newcomers cannot harm the system badly. They only can create a number of spam posts which can be easily hidden by other users. 
-There should be some automated spam filter which can be optionally enabled by any user to hide
-*Should there be a mechanism of automated massive downvote of spammers gang?
-
-
-
-*Main problem here: any voter can decide to start growing an army of sybils, because he has a right to upvote. He cannot vote for himself, but he needs the reasons to give votes fairly and not to his sybils
-
-There are some ways to prevent sybil attacks in this scheme. 
-
-Growing of sybils can be made too slow by additional constraints. Which can be:
+Growing of sybils can be made too slow by additional constraints, which can be:
 - To get some karma you have to get at least 2 upvotes. 
 - There can be activity coefficient which will reward constantly high activity, like +2% to karma if there were upvoted content in the last days, up to 10%, or decrease up to 10% if there was no activity in last 5 days.
 - After 3 days in a row of upvoting specific person by another specific person there should be cooldown for 1 or 2 days. So one user cannot be upvoted too much by single voter or even elder. 
 
-( *to consider if the 3 days restriction wont harm the constructive behaiviour* )
+( *todo: to consider if the 3 days restriction wont harm the constructive behaiviour* )
 
 Another way to prevent such attack is rewarding upvotes for the good content. If some content which you've upvoted then was heavily promoted by other users you also receive some additional karma.
 
