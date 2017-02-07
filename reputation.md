@@ -70,12 +70,30 @@ Proof of identity by linking the social accounts, which were used in hack.ether.
 
 Some additional options to consider: 
 - Karma growth can be boosted during the first weeks or months after the system launch to help the community grow more intensively.
+- Hide button. If voter considers that some content is spam or offensive, he can press 'Hide' button, so he will not see this comment or post in the future. After getting *(voter_karma) / 25 == 100* the author of content gets a cooldown for karma acquiring for 1 day. (Effect can be worse if he will get more 'spam' flags).
+
+### HKG deposit
+
+*need to be double checked, because boosting karma growth by deposit could help sybils creation in some circumstances
+
+Deposit can be another way to prevent sybil entities creation.
+E.g. math can be:
+
+`karma +=   karmaGain * 2^a`
+
+while the 2^a depends on HKG you deposit
+
+- 50,000HKG => a = 2
+- 100,000HKG => a=3
+- 200,000HKG => a=4
+- 1M  => a=5
 
 ## Kudos as a measure of project's quality
 Every voter which proved his trustful status can vote also for the projects (camps). They have amount of **kudos** which is linear function of karma:
 `kudos = karma / 10`
 
 User can give any available kudos amount to the selected projects when the voting is open.
+Karma >5000 cannot affect actor's available kudos, it's only applyable to content moderation.
 
 ## Who pays for the gas
 Voters are gas payers. When user becames voter he receives some Ether to cast, for example, 10 upvotes. Good content should be rewarded. For every 10 upvotes user receives, for example, 1 HKG to his address. He can exchange it to Ether as some external exchange and use to pay for the gas again.
@@ -94,32 +112,6 @@ All contract data is open, so any user is able to analyze the interactions betwe
 
 ## References
 [1] *TODO* ref on symmetric rep. systems
-
-
-#### HKG deposit
-
-* need to be double checked, because boosting karma growth by deposit could help sybils creation in some circumstances
-
-Deposit can be another way to prevent sybil entities creation.
-E.g. math can be:
-
-`karma +=   karmaGain * 2^a`
-
-while the 2^a depends on HKG you deposit
-
-- 50,000HKG => a = 2
-- 100,000HKG => a=3
-- 200,000HKG => a=4
-- 1M  => a=5
-
-#### Hide button
-
-If voter considers that some content is spam or offensive, he can press 'Hide' button, so he will not see this comment or post in the future. After getting *(voters karma) / 25 == 100* the author of content gets a cooldown for karma acquiring for 1 day. (Effect can be worse if he will get more 'spam' flags).
-
-
-*Karma >5000 cannot affect actor's project voting power, it's only applyable to content moderation. *
-
-
 
 ===
 
