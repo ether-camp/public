@@ -25,15 +25,30 @@ All symmetric reputation systems are proven to be sybil-vulnerable [1]. So we ne
 We are creating asymetric reputational function. Therefore, we need to designate some actors subset as trustful and give them rights to rate activity of other actors and reward valuable community members with trustful status.
 Every participant of the system can create a content which can be rated by users with high enough karma. When an author of the comment or post receives some upvotes for his content, he receives karma depending on formula:
 
-`received_karma == (voter_karma) / a`, where *a* is a coefficient which can be changed in future. a == 25 on the start.
+`received_karma == (voter_karma) / karma_coefficient`
 
+**karma_coefficient** can be changed in future and equals **25** on the start.
+
+### Actors roles
+
+Every actor has a role depending on his karma amount. The role is also determines maximal amount of karma which can be received for one day.
+The roles are:
+
+`
+- 1. Newcomer, karma 0-99, max gain daily 20.
+- 2. Voter, karma 100-5000, can vote for the projects and content, max gain daily 100.
+- 3. Elder, karma >5000, can also downvote content or even punish the untrustful users. Karma >5000 cannot affect your project voting power, it's only applyable to content moderation. 
+`
+
+( *todo: find name levels for different ranks* ) 
+( *Should there be a daily upvote limit which can be done by particular user? )
+
+### Initial karma distribution and project reviews
 In order to create an initial kernel of trustful users we can give some karma to actors at our discretion. Along with this or istead of it we can delegate initial karma granting function to the owners of the projects.
-
-### Project reviews
 Every user can write a review for any published project. Any owner of this project can *recognize* the review and make it visible to other community members (*TODO should the review be hidden before the approve or there should be another tab for unapproved reviews?*). An author of the review receives some fixed amount of karma in the case of approve. It can be max daily amount for a newcomer.
 All the reviews can recieve normal votes from the community after the approval like any other post or comment.
 
-Project reviews suppose to be a mechanism which will help to accumulate initial karma value by community new members. 
+Project reviews supposed to be a mechanism which will help to accumulate initial karma value by community new members. 
 
 - *Should there be overall karma daily limit? Can there be some attack on it if many bots drain all the daily karma?*
 - *First review for the particular project can give more karma. It will stimulate to give the reviews for all projects.*
@@ -44,16 +59,12 @@ Project reviews suppose to be a mechanism which will help to accumulate initial 
  
 
 
-Statuses:
-- 1. Newcomer, karma 0-99, max gain daily 20.
-- 2. Voter, karma 100-5000, can vote for the projects and content, max gain daily 100.
-- 3. Elder, karma >5000, can also downvote content or even punish the untrustful users. Karma >5000 cannot affect your project voting power, it's only applyable to content moderation. 
 
 ( *todo: maybe punisment by not downvote buy by some remark* )
 
-( *todo: find name levels for different ranks* ) 
 
-*Should there be a daily upvote limit which can be done by particular user?
+
+
 
 Every normal person starts with 0 karma. It should be quite hard to get a voter status, because newcomers cannot harm the system badly. They only can create a number of spam posts which can be easily hidden by other users. 
 There should be some automated spam filter which can be optionally enabled by any user to hide
