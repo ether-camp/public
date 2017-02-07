@@ -14,7 +14,12 @@ We, as authors of the platform, want to change it. Loudest projects are not alwa
 - Vote - transaction where user gives some of his available kudos to the selected project
 
 ## Motivation 
-The main goal of system is to create a community of experts which votes for the projects or any other content is trustful. All symmetric reputation systems are proven to be sybil-vulnerable. So we need to make a sybil creation unaffordably expensive or use some sybil-protection mechanisms.
+The main goal of system is to create a community of experts which votes for the projects or any other content is trustful. 
+Reputational system can be presented as a graph where nodes are actors of the system and edges are relationships between the actors. Reputational function is called symmetric if reputation depends only on interactions between actors, not on actor's roles and statuses. And asymetric reputational fuction depends both on graph edges weights and on nodes labels.
+All symmetric reputation systems are proven to be sybil-vulnerable [1]. So we need to make a sybil creation unaffordably expensive or use some sybil-protection mechanisms.
+
+## References
+[1] *TODO* ref on symmetric rep. systems
 
 #### Actors 
 One of the mechanisms to create sybil-proof system is to set some seed. We need an initial reputation which is set to some actors whose identity is proven. Such actors can be project owners and some kernel of community.
