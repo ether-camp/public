@@ -10,6 +10,7 @@ We, as authors of the platform, want to change it. Loudest projects are not alwa
 - Karma - points attached to some user identity to depict his reputation in the system
 - Kudos - voting power of user. Can be calculated as a linear function of *karma*
 - User - anybody who is logged in to the system
+- Sybil - additional account of some user which can be used to enhance his voting power
 - Project (camp) - idea is the essence of innovation, the idea that seek to meet the reality is a project
 - Vote - transaction where user gives some of his available kudos to the selected project
 
@@ -20,6 +21,15 @@ Reputational system can be presented as a graph where nodes are actors of the sy
 * TODO some pictures of graphs here? *
 
 All symmetric reputation systems are proven to be sybil-vulnerable [1]. So we need to make a sybil creation unaffordably expensive or use some sybil-protection mechanisms.
+
+## Prisoners dilemma and transitive trust systems
+*TODO: strategies, grim strategy, better to cooperate on a long-term, but in a short-term environment dominant strategy is to defect.*
+
+## Known Attacks
+
+- *Whitewashing* - An entity may acuire a new user and start over with the new reputation list
+- *Incorectly Reported Feedback* - Enitties may not report feedback or may not report it honestly
+- *Phantom Feedback* - Feedback provided by fake enities a.k.a sybils created for the sole purpose of providing such phantom feedback
 
 ## Karma gain system
 We are creating asymetric reputational function. Therefore, we need to designate some actors subset as trustful and give them rights to rate activity of other actors and reward valuable community members with trustful status.
@@ -46,6 +56,7 @@ Every normal person starts with 0 karma. It should be quite hard to get a voter 
 - ( *TODO: Determine a daily upvote limit which can be done by particular actor* )
 
 ### Karma growing curve
+It easily can be seen that even if user posts good content and receives upvotes every day his overall karma gain will be low when his rank is low. It's always more reasonable to develop user's main account instead of sybils after he overcome the first stage, the newcomer status.
 
 ![Karma growing curve](http://i.imgur.com/SrT3jAv.png)
 
@@ -79,8 +90,6 @@ Some additional options to consider:
 
 ### HKG deposit
 
-*need to be double checked, because boosting karma growth by deposit could help sybils creation in some circumstances
-
 Deposit can be another way to prevent sybil entities creation.
 E.g. math can be:
 
@@ -92,6 +101,12 @@ while the 2^a depends on HKG you deposit
 - 100,000HKG => a=3
 - 200,000HKG => a=4
 - 1M  => a=5
+
+## Moderation
+
+### Elders, shamans and chief
+
+### Turnover of power
 
 ## Kudos as a measure of project's quality
 Every voter which proved his trustful status can vote also for the projects (camps). They have amount of **kudos** which is linear function of karma:
@@ -119,12 +134,6 @@ All contract data is open, so any user is able to analyze the interactions betwe
 [1] *TODO* ref on symmetric rep. systems
 
 ===
-
-## Known Attacks
-
-- *Whitewashing* - An entity may acuire a new user and start over with the new reputation list
-- *Incorectly Reported Feedback* - Enitties may not report feedback or may not report it honestly
-- *Phantom Feedback* - Feedback provided by fake enities a.k.a sybils created for the sole purpose of providing such phantom feedback
 
 ## Points to think about 
 
