@@ -45,6 +45,11 @@ Every normal person starts with 0 karma. It should be quite hard to get a voter 
 - ( *TODO: find name levels for different ranks* ) 
 - ( *TODO: Determine a daily upvote limit which can be done by particular actor* )
 
+### Karma growing curve
+
+![Karma growing curve](http://imgur.com/a/yYEDy)
+
+
 ### Initial karma distribution and project reviews
 In order to create an initial kernel of trustful users we can give some karma to actors at our discretion. Along with this or istead of it we can delegate initial karma granting function to the owners of the projects.
 Project reviews supposed to be a mechanism which will help to accumulate initial karma value by the community new members. Every user can write a review for any published project. We propose to give the project an option to recognize the review. Review recognition doesn't say that the project agrees with it but it gives some mechanism to encourage reviewers to be constructive in their critics. Any owner of this project can *recognize* the review and make it visible to other community members.
