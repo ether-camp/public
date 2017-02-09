@@ -27,7 +27,6 @@ All symmetric reputation systems are proven to be sybil-vulnerable [1]. So we ne
 
 ## Known Attacks
 
-- *Whitewashing* - An entity may acuire a new user and start over with the new reputation list
 - *Incorectly Reported Feedback* - Enitties may not report feedback or may not report it honestly
 - *Phantom Feedback* - Feedback provided by fake enities a.k.a sybils created for the sole purpose of providing such phantom feedback
 
@@ -59,6 +58,35 @@ Every normal person starts with 0 karma. It should be quite hard to get a voter 
 It easily can be seen that even if user posts good content and receives upvotes every day his overall karma gain will be low when his rank is low. It's always more reasonable to develop user's main account instead of sybils after he overcome the first stage, the newcomer status.
 
 ![Karma growing curve](http://i.imgur.com/SrT3jAv.png)
+
+## Known attacks
+
+There is a number of known attacks on reputational systems. For example, every user easily can change his displayable identity, create a number of sybils or give feedback not honestly. 
+
+### Whitewashing attack
+*Whitewashing* - An entity may acquire a new user and start over with the new reputation list.
+
+#### Preventing whitewashing
+
+
+### Sybils attack
+Every user can create additional entities or hire some users who are not interested in platform development and creating quality content.
+
+#### Rebuffing sybils
+
+### Dishonest feedback
+Every user can post content and receive additional karma for it. Also, he has voting power which can be spread over the posts of other users, because he cannot vote for himself. If there is no reward for honest upvoting good content his dominant strategy will be slowly upvoting sybils.
+Considering a constraint of minimum 2 upvotes for some post to get karma, maleficent *voter* can create another *voter* as sybil or unite with someone to start more sybils growing.
+
+        Karma
+Voter 1 100
+Voter 2 100
+
+        Day 1 ... Day 13
+Sybil 1 8         104
+Sybil 2 8         104
+
+So, on the 13th day there will be a number of sybils even though there was no karma growth of maleficient users and they were only 2 of them. 
 
 
 ### Initial karma distribution and project reviews
@@ -103,10 +131,14 @@ while the 2^a depends on HKG you deposit
 - 1M  => a=5
 
 ## Moderation
-
+(*TODO!!!*)
 ### Elders, shamans and chief
 
+Shamans can punish with a lowing coefficient on the few nexts posts or bless with additional labels for the post, chief can decline shamans offers. 
+(*TODO: Can chief punish and reward by himself?*)
+
 ### Turnover of power
+Every week 10 shamans and 1 chief randomly choosen among the elders. If there are not enough elders, number of shamans will be lower.
 
 ## Kudos as a measure of project's quality
 Every voter which proved his trustful status can vote also for the projects (camps). They have amount of **kudos** which is linear function of karma:
