@@ -47,7 +47,7 @@ Every normal person starts with 0 karma. It should be quite hard to get a voter 
 
 ### Karma growing curve
 
-![Karma growing curve](http://imgur.com/a/yYEDy)
+![Karma growing curve](http://imgur.com/SrT3jAv)
 
 
 ### Initial karma distribution and project reviews
