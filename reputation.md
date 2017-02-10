@@ -73,16 +73,37 @@ Every user can create additional entities or hire some users who are not interes
 Every user can post content and receive additional karma for it. Also, he has voting power which can be spread over the posts of other users, because he cannot vote for himself. If there is no reward for honest upvoting good content his dominant strategy will be slowly upvoting sybils.
 Considering a constraint of minimum 2 upvotes for some post to get karma, maleficent *voter* can create another *voter* as sybil or unite with someone to start more sybils growing.
 
+```
         Karma
 Voter 1 100
 Voter 2 100
+```
 
-        Day 1 ... Day 13
-Sybil 1 8         104
-Sybil 2 8         104
+```
+         Day 1 ... Day 13
+Sybil 1      8 ... 104
+Sybil 2      8 ... 104
+```
 
 So, on the 13th day there will be a number of sybils even though there was no karma growth of maleficient users and they were only 2 of them. 
 
+User have to have some inception to give feedback more honestly. Let's propose reward system for a fair voting.
+
+#### Rewards for the votes
+We need to choose a metric of a good upvote. In a decentralized environment we cannot use some rating center which will define  how the good content should look like. The popularity can be a measure of value of the content for the community. Let's choose *popularity* as main metric of content quality. If actor chooses to upvote some unrated content which is lately upvoted by more user he should be rewarded for it.
+
+The rules for the rewarding are:
+- There should be minimal quantity of users who upvoted content to consider it popular
+- First upvoter receives maximal reward, reward will decrease for every subsequent upvoter
+- Upvoting already popular content will not reward you with additional karma
+
+Initial constants are:
+- popular_content_upvotes >= 10
+- first_upvoter_reward = 10 karma
+- max_rewarded_users = 10
+- reward_decrease_step = 1
+
+So, first upvoter of the popular content with 10 or more upvotes receives 10 karma, 10th upvoter gets 1 karma.
 
 ### Initial karma distribution and project reviews
 In order to create an initial kernel of trustful users we can give some karma to actors at our discretion. Along with this or istead of it we can delegate initial karma granting function to the owners of the projects.
@@ -91,14 +112,27 @@ First review for the particular project can give more karma. It will stimulate t
 
 (*TODO should the review be hidden before the approve or should there be another tab for unapproved reviews?*). 
 
-An author of the review receives some fixed amount of karma in the case of *recognition*. It can be max daily amount for a *newcomer*. All the reviews can recieve normal votes from the community after the approval like any other post or comment.
+An author of the review receives *50 karma* in the case of *recognition*. All the reviews can recieve normal votes from the community after the approval like any other post or comment. First recognized review for the project also receives $60 in HKG equivalent to reward reviewing every project.
+
+#### Camp owners identity verification
+If any user of the platform can start a camp, therefore there could be fake camps which can be used to take advantage in acquiring the karma.
+Hack.ether.camp is going to be a verification center, which will be able to check if camp and camp owners are real people and they can get the rights to recognize the reviews.
 
 ### Creating a sybil-proof system
 Main problem here: any voter can decide to start growing an army of sybils, because he has a right to upvote. He cannot vote for himself, but he needs the reasons to give votes fairly and not for his sybils. There are some ways to prevent sybil attacks in this scheme. 
 
 #### Provably sybil-proof systems
+As been shown in [Algoritmic game theory](https://github.com/ether-camp/public/blob/master/reputation.md#2-algorithmic-game-theory-nisan-noam-edt-roughgarden-tim-edt-tardos-eva-edt-vazirani-vijay-v-edt-690-693), both *PageRank* and *max-flow* ranking systems are vulnerable to sybil attacks.
 
+*TODO: proof of it?*
 
+*PathRank* is an approach to reputation calculation based on the shortest path. Here is a graph where weight of the edge is a inverted amount of given *karma*.
+
+*TODO: picture of graph *
+
+So, as it easily can be seen, adding more nodes with low karma and edges to the node which karma is desired to be improved cannot change anything, because shorter path will always use edges from high-rank actors. This system is sybil-proof, but it has another flaw. The votes of the new members cannot impact some user's karma if there were votes from high-rank actors. It becames some kind of *aristocrathy* in the meaning of form of government. And we are going to build a democratic system. So PathRank is not an option and we have to use ... *TODO!!!*
+
+#### Slowing down sybils growing
 Growing of sybils can be made too slow by additional constraints, which can be:
 - An actor have to get at least 2 upvotes from different users to get a karma for your content. 
 - There can be activity coefficient which will reward constantly high activity, like +2% to karma if there were upvoted content in the last days, up to 10%, or decrease up to 10% if there was no activity in last 5 days.
