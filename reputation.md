@@ -178,9 +178,8 @@ All contract data is open, so any user is able to analyze the interactions betwe
 
 
 ## References
-[1] The PageRank Citation Ranking: Bringing Order to the Web. http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf
-[2] Algorithmic Game Theory. Nisan, Noam (EDT)/ Roughgarden, Tim (EDT)/ Tardos, Eva (EDT)/ Vazirani, Vijay V. (EDT). 690-693
-[1] *TODO* ref on symmetric rep. systems
+##### [1] The PageRank Citation Ranking: Bringing Order to the Web. http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf
+##### [2] Algorithmic Game Theory. Nisan, Noam (EDT)/ Roughgarden, Tim (EDT)/ Tardos, Eva (EDT)/ Vazirani, Vijay V. (EDT). 690-693
 
 ===
 
