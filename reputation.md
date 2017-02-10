@@ -141,7 +141,7 @@ User have 2 supporters with karma 100 and gets upvotes every day, 5 days in a ro
 
 `daily_karma_gain = (100 / 25) * 2 * 3 = 24 (actually, 20 due to daily limit)`
 
-Therefore, you still have to produce valuable content to get your karma, but if someone want your voting rights quickly, he can achieve it with deposit. Moreover, when this user gets next status, the daily limit stops to affect him, so it makes sense to hold the deposit on the main account, not on the sybils.
+Therefore, user still have to produce valuable content to get his karma, but if someone want your voting rights quickly, he can achieve it with deposit. Moreover, when this user gets next status, the daily limit stops to affect him, so it makes sense to hold the deposit on the main account, not on the sybils.
 
 #### Deposit activation and withdrawal
 
