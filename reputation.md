@@ -20,15 +20,10 @@ Reputational system can be presented as a graph where nodes are actors of the sy
 
 * TODO some pictures of graphs here? *
 
-All symmetric reputation systems are proven to be sybil-vulnerable [1]. So we need to make a sybil creation unaffordably expensive or use some sybil-protection mechanisms.
+All symmetric reputation systems are proven to be sybil-vulnerable. One of the famous approaches to build a symmetric reputational system was *PageRank* [1] which was vulnerable to creating sybil entities such as *doorways*. So we need to make a sybil creation unaffordably expensive or use some sybil-protection mechanisms.
 
 ## Prisoners dilemma and transitive trust systems
 *TODO: strategies, grim strategy, better to cooperate on a long-term, but in a short-term environment dominant strategy is to defect.*
-
-## Known Attacks
-
-- *Incorectly Reported Feedback* - Enitties may not report feedback or may not report it honestly
-- *Phantom Feedback* - Feedback provided by fake enities a.k.a sybils created for the sole purpose of providing such phantom feedback
 
 ## Karma gain system
 We are creating asymetric reputational function. Therefore, we need to designate some actors subset as trustful and give them rights to rate activity of other actors and reward valuable community members with trustful status.
@@ -100,6 +95,9 @@ An author of the review receives some fixed amount of karma in the case of *reco
 
 ### Creating a sybil-proof system
 Main problem here: any voter can decide to start growing an army of sybils, because he has a right to upvote. He cannot vote for himself, but he needs the reasons to give votes fairly and not for his sybils. There are some ways to prevent sybil attacks in this scheme. 
+
+#### Provably sybil-proof systems
+
 
 Growing of sybils can be made too slow by additional constraints, which can be:
 - An actor have to get at least 2 upvotes from different users to get a karma for your content. 
@@ -180,6 +178,8 @@ All contract data is open, so any user is able to analyze the interactions betwe
 
 
 ## References
+[1] The PageRank Citation Ranking: Bringing Order to the Web. http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf
+[2] Algorithmic Game Theory. Nisan, Noam (EDT)/ Roughgarden, Tim (EDT)/ Tardos, Eva (EDT)/ Vazirani, Vijay V. (EDT). 690-693
 [1] *TODO* ref on symmetric rep. systems
 
 ===
