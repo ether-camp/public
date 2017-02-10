@@ -128,7 +128,7 @@ The formula is
 
 while the *a* depends on HKG you deposit:
 
-- < 1000HKG => 0
+- < 1000HKG => a = 0
 - 1000HKG => a = 1
 - 5000HKG => a = 2
 - 10000HKG => a = 3
