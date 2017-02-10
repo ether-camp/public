@@ -118,17 +118,34 @@ Some additional options to consider:
 
 ### HKG deposit
 
-Deposit can be another way to prevent sybil entities creation.
-E.g. math can be:
+Any person who wants to invest in platform development and show himself as a long-term supporter can make a deposit. Main currency of hack.ether.camp is *Hacker Gold (HKG)*. Also, deposit can be another way to prove user's identity and to prevent sybils entities creation.
+As a reward those who invested in a platform can receive additional karma. 
+Following to this link https://etherscan.io/token/HackerGold#balances, only 123 of 506 HKG holders have more than 10k HKG. The majority of holders have 1k or less. So, the proposal is to set minumal deposit amount which can give you some additional power to 1000 HKG.
 
-`karma +=   karmaGain * 2^a`
+In the case if user has such deposit, he will get a karma boost x3 for all the received upvotes.
 
-while the 2^a depends on HKG you deposit
+The formula is
 
-- 50,000HKG => a = 2
-- 100,000HKG => a=3
-- 200,000HKG => a=4
-- 1M  => a=5
+`karma +=  karma_gain * 3^a`
+
+while the *a* depends on HKG you deposit:
+
+- 1000HKG => a = 1
+- 5000HKG => a = 2
+- 10000HKG => a = 3
+
+The deposit doesn't changes user's daily karma limits, but it helps him to pass the current level in the hierarchy more quickly.
+
+*Example:*
+User have 2 supporters with karma 100 and gets upvotes every day, 5 days in a row.
+
+`daily_karma_gain = (100 / 25) * 2 * 3 = 24 (actually, 20 due to daily limit)`
+
+Therefore, you still have to produce valuable content to get your karma, but if someone want your voting rights quickly, he can achieve it with deposit. Moreover, when this user gets next status, the daily limit stops to affect him, so it makes sense to hold the deposit on the main account, not on the sybils.
+
+#### Deposit activation and withdrawal
+
+Hack.ether.camp doesn't wants to take these deposits once and forever. It can be easily withdrawed at any moment. But to prevent manipulations with different accounts, every deposit value should be on a particular account at least for *48 hours* to activate it's functions.
 
 ## Moderation
 (*TODO!!!*)
