@@ -194,8 +194,21 @@ User have 2 supporters with karma 100 and gets upvotes every day, 5 days in a ro
 Therefore, user still have to produce valuable content to get his karma, but if someone want your voting rights quickly, he can achieve it with deposit. Moreover, when this user gets next status, the daily limit stops to affect him, so it makes sense to hold the deposit on the main account, not on the sybils.
 
 #### Deposit activation and withdrawal
-
 Hack.ether.camp doesn't wants to take these deposits once and forever. It can be easily withdrawed at any moment. But to prevent manipulations with different accounts, every deposit value should be on a particular account at least for *48 hours* to activate it's functions.
+
+#### Attacks using deposit
+As been shown above, it's always more profitable to use deposit as a boost for your main account, except the case when some maleficient user already has a control over at least 2 accounts with *voter* status and he doesn't wants to produce a content anymore. 
+If the user with deposit tries to get the rewards for good voting, he will receive for the upvote in the case where he is the first upvoter:
+```
+1000 HKG deposit => (2 voters) * (10 karma) * 3 == 60
+5000 HKG deposit => (2 voters) * (10 karma) * 9 == 180
+```
+And if the user tries to withdraw his deposit and then put it to the sybil's account he will receive maximum:
+```
+1000 HKG => (2 voters) * (4 karma) * 3 == 24 (20 due to limit)
+5000 HKG => (2 voters) * (4 karma) * 9 == 56 (20 due to limit)
+```
+It easily can be seen that dominant strategy here is to activily participate in the content rating from the user's main account.
 
 ## Moderation
 (*TODO!!!*)
