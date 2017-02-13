@@ -77,41 +77,7 @@ daily_upvotes_limit = voter_karma / 20
 ```
 According to this formula, user who nearly got karma == 100 and *voter* status will be able to give 5 upvotes a day.
 
-## Known attacks
-
-There is a number of known attacks on reputational systems. For example, every user easily can change his displayable identity, create a number of sybils or give feedback not honestly. 
-
-### Whitewashing attack
-*Whitewashing* - An entity may acquire a new user and start over with the new reputation list.
-
-#### Preventing whitewashing
-
-
-### Sybils attack
-Every user can create additional entities or hire some users who are not interested in platform development and creating quality content.
-
-#### Rebuffing sybils
-
-### Dishonest feedback
-Every user can post content and receive additional karma for it. Also, he has voting power which can be spread over the posts of other users, because he cannot vote for himself. If there is no reward for honest upvoting good content his dominant strategy will be slowly upvoting sybils.
-Considering a constraint of minimum 2 upvotes for some post to get karma, maleficent *voter* can create another *voter* as sybil or unite with someone to start more sybils growing.
-
-
-Voters | Karma
--------|------
-Voter 1 | 100
-Voter 2 |100
-
-Sybils        | Day 1 | Day 13
---------------|-------|---------
-Sybil 1 | 8 | 104
-Sybil 2 | 8 | 104
-
-So, on the 13th day there will be a number of sybils even though there was no karma growth of maleficient users and they were only 2 of them. 
-
-User have to have some inception to give feedback more honestly. Let's propose a reward system for the fair voting.
-
-#### Rewards for the votes
+### Rewards for the votes
 We need to choose a metric of a good upvote. In a decentralized environment we cannot use some rating center which will define  how the good content should look like. The popularity can be a measure of value of the content for the community. Let's choose *popularity* as main metric of content quality. If actor chooses to upvote some unrated content which is lately upvoted by more user he should be rewarded for it.
 
 The rules for the rewarding are:
@@ -140,19 +106,37 @@ An author of the review receives *50 karma* in the case of *recognition*. All th
 If any user of the platform can start a camp, therefore there could be fake camps which can be used to take advantage in acquiring the karma.
 Hack.ether.camp is going to be a verification center, which will be able to check if camp and camp owners are real people and they can get the rights to recognize the reviews.
 
+## Known attacks
+
+There is a number of known attacks on reputational systems. For example, every user easily can change his displayable identity, create a number of sybils or give feedback not honestly. 
+
+### Whitewashing attack
+*Whitewashing* - An entity may acquire a new user and start over with the new reputation list.
+
+#### Preventing whitewashing
+
+
+### Sybils attack
+Every user can create additional entities or hire some users who are not interested in platform development and creating quality content.
+
 ### Creating a sybil-proof system
 Main problem here: any voter can decide to start growing an army of sybils, because he has a right to upvote. He cannot vote for himself, but he needs the reasons to give votes fairly and not for his sybils. There are some ways to prevent sybil attacks in this scheme. 
 
 #### Provably sybil-proof systems
-As been shown in [Algoritmic game theory](https://github.com/ether-camp/public/blob/master/reputation.md#2-algorithmic-game-theory-nisan-noam-edt-roughgarden-tim-edt-tardos-eva-edt-vazirani-vijay-v-edt-690-693), both *PageRank* and *max-flow* ranking systems are vulnerable to sybil attacks.
 
-*TODO: proof of it?*
+As been shown in [Algoritmic game theory](https://github.com/ether-camp/public/blob/master/reputation.md#2-algorithmic-game-theory-nisan-noam-edt-roughgarden-tim-edt-tardos-eva-edt-vazirani-vijay-v-edt-690-693), both *PageRank*-like reputational functions are vulnerable to sybil attacks.
 
-*PathRank* is an approach to reputation calculation based on the shortest path. Here is a graph where weight of the edge is a inverted amount of given *karma*.
+**Proof:**
+Let G=(V,E) is a graph where nodes are reputational system actors and the weight of the edge between nodes *a* and *b* are cumulative *karma* value which was given by user *a* to user *b*. Then, *a* decides to create a sybil node *s* and increase it's *karma* enough to make a vote. After that, *s* upvotes *a*, so sybil attack can easily be performed, QED.
 
-*TODO: picture of graph *
+![Sybil attack on PageRank](http://imgur.com/awCxPkL.png)
 
-So, as it easily can be seen, adding more nodes with low karma and edges to the node which karma is desired to be improved cannot change anything, because shorter path will always use edges from high-rank actors. This system is sybil-proof, but it has another flaw. The votes of the new members cannot impact some user's karma if there were votes from high-rank actors. It becames some kind of *aristocrathy* in the meaning of form of government. And we are going to build a democratic system. So PathRank is not an option and we have to use ... *TODO!!!*
+*PathRank* is an approach to reputation calculation based on the shortest path. There is a *R* node which is root of the graph. The weight of the edges is an inverted amount of given *karma*. Therefore, we can find total karma value for every node by calculating shortest path between the root and certain node.
+As shown on the picture below, creating additional sybil node cannot affect the shortest path to the maleficient node, , because shorter path will always use edges from more high-ranked actors. *PathRank* can be considered sybil-proof.
+
+![Shortest path reputational system](http://imgur.com/GwvdGJB.png)
+
+However, such reputational function has another flaw. The votes of the new members cannot impact some user's karma if there were votes from high-rank actors. It becames some kind of *aristocrathy* in the meaning of form of government. It doesn't fits the requirements to build a distributed and democratic system reputation system. So PathRank is not an option. Instead of it we can use an approach which is close to the *PageRank* with some additional constraints to make the sybil attack more problematic for the attacker.
 
 #### Slowing down sybils growing
 Growing of sybils can be made too slow by additional constraints, which can be:
@@ -169,6 +153,26 @@ Proof of identity by linking the social accounts, which were used in hack.ether.
 Some additional options to consider: 
 - Karma growth can be boosted during the first weeks or months after the system launch to help the community grow more intensively.
 - Hide button. If voter considers that some content is spam or offensive, he can press 'Hide' button, so he will not see this comment or post in the future. After getting *(voter_karma) / 25 == 100* the author of content gets a cooldown for karma acquiring for 1 day. (Effect can be worse if he will get more 'spam' flags).
+
+
+### Dishonest feedback
+Every user can post content and receive additional karma for it. Also, he has voting power which can be spread over the posts of other users, because he cannot vote for himself. If there is no reward for honest upvoting good content his dominant strategy will be slowly upvoting sybils.
+Considering a constraint of minimum 2 upvotes for some post to get karma, maleficent *voter* can create another *voter* as sybil or unite with someone to start more sybils growing.
+
+
+Voters | Karma
+-------|------
+Voter 1 | 100
+Voter 2 |100
+
+Sybils        | Day 1 | Day 13
+--------------|-------|---------
+Sybil 1 | 8 | 104
+Sybil 2 | 8 | 104
+
+So, on the 13th day there will be a number of sybils even though there was no karma growth of maleficient users and they were only 2 of them. 
+
+User have to have some inception to give feedback more honestly. Let's propose a reward system for the fair voting.
 
 ### HKG deposit
 
