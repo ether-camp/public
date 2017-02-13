@@ -25,6 +25,23 @@ All symmetric reputation systems are proven to be sybil-vulnerable. One of the f
 ## Prisoners dilemma and transitive trust systems
 *TODO: strategies, grim strategy, better to cooperate on a long-term, but in a short-term environment dominant strategy is to defect.*
 
+We can consider the reputation growing as a *game* where every user chooses if he is going to rate the content honestly or not. The classical problem of the game theory is [*Prisoners dilemma*](https://en.wikipedia.org/wiki/Prisoner's_dilemma) where each actor chooses whether to cooperate or to defect. 
+
+*todo matrix form of the game*
+
+T > R > P > S
+
+The *dominant strategy* for this game is to *defect*, because it provides the maximum payoff for every player who chooses it. Applying to our case it means that every voter will have rational tendency to rate content unhonestly to maximize his payoff.
+In the case if this game is repeated in N rounds and all actors have memory about prior actions of other participants the *superrational* players can choose another strategy.
+So called Grim strategy is to cooperate with other players unless they defect in previous round. Every superrational player gets a better payoff, because he receiving R in the majority of rounds.
+
+To make this game sustainable we need at least 2 things:
+- Some metrics of the player behaviour. How often he chooses to defect.
+- The number of rounds should be big.
+
+Hack.ether.camp is meant to be a long-term virtual accelerator, so the reputation score can be valuable during the long period and solves the second problem.
+Let's describe the *karma* as the main metric of player's cooperating behaviour.
+
 ## Karma gain system
 We are creating asymetric reputational function. Therefore, we need to designate some actors subset as trustful and give them rights to rate activity of other actors and reward valuable community members with trustful status.
 Every participant of the system can create a content which can be rated by users with high enough karma. When an author of the comment or post receives some upvotes for his content, he receives karma depending on formula:
