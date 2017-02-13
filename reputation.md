@@ -101,7 +101,7 @@ Every user can create additional entities or hire some users who are not interes
 Main problem here: any voter can decide to start growing an army of sybils, because he has a right to upvote. He cannot vote for himself, but he needs the reasons to give votes fairly and not for his sybils. There are some ways to prevent sybil attacks in this scheme. 
 
 #### Provably sybil-proof systems
-As been shown in [Algoritmic game theory](https://github.com/ether-camp/public/blob/master/reputation.md#2-algorithmic-game-theory-nisan-noam-edt-roughgarden-tim-edt-tardos-eva-edt-vazirani-vijay-v-edt-690-693), both *PageRank*-like reputational functions are vulnerable to sybil attacks.
+As been shown in [Algoritmic game theory](https://github.com/ether-camp/public/blob/master/reputation.md#2-algorithmic-game-theory-nisan-noam-edt-roughgarden-tim-edt-tardos-eva-edt-vazirani-vijay-v-edt-690-693), *PageRank*-like reputational functions are vulnerable to sybil attacks.
 
 **Proof:**
 Let G=(V,E) is a graph where nodes are reputational system actors and the weight of the edge between nodes *a* and *b* are cumulative *karma* value which was given by user *a* to user *b*. Then, *a* decides to create a sybil node *s* and increase it's *karma* enough to make a vote. After that, *s* upvotes *a*, so sybil attack can easily be performed, QED.
