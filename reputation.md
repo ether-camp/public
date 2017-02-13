@@ -32,11 +32,11 @@ Strategy        | Cooperate	| Defect
 Cooperate | R, R | S, T
 Defect | T, S | P, P
 
-T > R > P > S
+, where T > R > P > S
 
 The *dominant strategy* for this game is to *defect*, because it provides the maximum payoff for every player who chooses it. Applying to our case it means that every voter will have rational tendency to rate content unhonestly to maximize his payoff.
 In the case if this game is repeated in N rounds and all actors have memory about prior actions of other participants the [*superrational*](https://en.wikipedia.org/wiki/Superrationality) players can choose another strategy.
-So called Grim strategy is to cooperate with other players unless they defect in previous round. It easily can be shown that every *superrational& player gets a better payoff, because he receiving R in the majority of rounds.
+So called Grim strategy is to cooperate with other players unless they defect in previous round. It easily can be shown that every *superrational* player gets a better payoff, because he is receiving R in the majority of rounds.
 
 To make this game sustainable we need at least 2 things:
 - Some metrics of the player behaviour. How often he chooses to defect.
