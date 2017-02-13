@@ -17,10 +17,11 @@ We, as authors of the platform, want to change it. Loudest projects are not alwa
 ## Motivation 
 The main goal of system is to create a community of experts which votes for the projects or any other content is trustful. 
 Reputational system can be presented as a graph where nodes are actors of the system and edges are relationships between the actors. Reputational function is called symmetric if reputation depends only on interactions between actors, not on actor's roles and statuses. And asymetric reputational fuction depends both on graph edges weights and on nodes labels.
+On the picture below there is an example of a symmetric and asymetric reputational functions. As can be seen, switching labels on the graph describing asymetric reputational function will also cause changing of the edges weights.
 
-* TODO some pictures of graphs here? *
+![Reputational fuctions](http://imgur.com/74lyWl9)
 
-All symmetric reputation systems are proven to be sybil-vulnerable. One of the famous approaches to build a symmetric reputational system was [*PageRank*](https://github.com/ether-camp/public/blob/master/reputation.md#1-the-pagerank-citation-ranking-bringing-order-to-the-web-httpilpubsstanfordedu809042211999-66pdf) which was vulnerable to creating sybil entities such as *doorways*. So we need to make a sybil creation unaffordably expensive or use some sybil-protection mechanisms.
+All symmetric reputation systems are proven to be [sybil-vulnerable](https://github.com/ether-camp/public/blob/master/reputation.md#provably-sybil-proof-systems). One of the famous approaches to build a symmetric reputational system was [*PageRank*](https://github.com/ether-camp/public/blob/master/reputation.md#1-the-pagerank-citation-ranking-bringing-order-to-the-web-httpilpubsstanfordedu809042211999-66pdf) which was vulnerable to creating sybil entities such as *doorways*. So we need to make a sybil creation unaffordably expensive or use some sybil-protection mechanisms.
 
 ## Prisoners dilemma and transitive trust systems
 We can consider the reputation growing as a *game* where every user chooses if he is going to rate the content honestly or not. The classical problem of the game theory is [*Prisoners dilemma*](https://en.wikipedia.org/wiki/Prisoner's_dilemma) where each actor chooses whether to cooperate or to defect. 
