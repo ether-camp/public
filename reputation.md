@@ -23,8 +23,6 @@ Reputational system can be presented as a graph where nodes are actors of the sy
 All symmetric reputation systems are proven to be sybil-vulnerable. One of the famous approaches to build a symmetric reputational system was [*PageRank*](https://github.com/ether-camp/public/blob/master/reputation.md#1-the-pagerank-citation-ranking-bringing-order-to-the-web-httpilpubsstanfordedu809042211999-66pdf) which was vulnerable to creating sybil entities such as *doorways*. So we need to make a sybil creation unaffordably expensive or use some sybil-protection mechanisms.
 
 ## Prisoners dilemma and transitive trust systems
-*TODO: strategies, grim strategy, better to cooperate on a long-term, but in a short-term environment dominant strategy is to defect.*
-
 We can consider the reputation growing as a *game* where every user chooses if he is going to rate the content honestly or not. The classical problem of the game theory is [*Prisoners dilemma*](https://en.wikipedia.org/wiki/Prisoner's_dilemma) where each actor chooses whether to cooperate or to defect. 
 
 *todo matrix form of the game*
@@ -63,13 +61,17 @@ The roles are:
 
 Every normal person starts with 0 karma. It should be quite hard to get a voter status, because newcomers cannot harm the system badly. They only can create a number of spam posts which can be easily hidden by other users if they like. 
 
-- ( *TODO: find name levels for different ranks* ) 
-- ( *TODO: Determine a daily upvote limit which can be done by particular actor* )
-
 ### Karma growing curve
 It easily can be seen that even if user posts good content and receives upvotes every day his overall karma gain will be low when his rank is low. It's always more reasonable to develop user's main account instead of sybils after he overcome the first stage, the newcomer status.
 
 ![Karma growing curve](http://imgur.com/oxIl6dn.png)
+
+### Upvotes limits
+Every should be done carefully and meaningfully, therefore it should be a daily depleatable resource which also can depend on user's karma.
+```
+daily_upvotes_limit = voter_karma / 20
+```
+According to this formula, user who nearly got karma == 100 and *voter* status will be able to give 5 upvotes a day.
 
 ## Known attacks
 
