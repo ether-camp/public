@@ -67,7 +67,7 @@ It easily can be seen that even if user posts good content and receives upvotes 
 ![Karma growing curve](http://imgur.com/oxIl6dn.png)
 
 ### Upvotes limits
-Every should be done carefully and meaningfully, therefore it should be a daily depleatable resource which also can depend on user's karma.
+Every upvote should be done carefully and meaningfully, therefore it should be a daily depleatable resource which also can depend on user's karma.
 ```
 daily_upvotes_limit = voter_karma / 20
 ```
