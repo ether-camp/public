@@ -26,8 +26,8 @@ All symmetric reputation systems are proven to be sybil-vulnerable. One of the f
 We can consider the reputation growing as a *game* where every user chooses if he is going to rate the content honestly or not. The classical problem of the game theory is [*Prisoners dilemma*](https://en.wikipedia.org/wiki/Prisoner's_dilemma) where each actor chooses whether to cooperate or to defect. 
 
 
-| Cooperate	| Defect
-----------------------
+ | Cooperate	| Defect
+----------------|-------
 Cooperate | R, R | S, T
 Defect | T, S | P, P
 
