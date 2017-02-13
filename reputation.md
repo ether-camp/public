@@ -96,21 +96,20 @@ Every user can create additional entities or hire some users who are not interes
 Every user can post content and receive additional karma for it. Also, he has voting power which can be spread over the posts of other users, because he cannot vote for himself. If there is no reward for honest upvoting good content his dominant strategy will be slowly upvoting sybils.
 Considering a constraint of minimum 2 upvotes for some post to get karma, maleficent *voter* can create another *voter* as sybil or unite with someone to start more sybils growing.
 
-```
-        Karma
-Voter 1 100
-Voter 2 100
-```
 
-```
-         Day 1 ... Day 13
-Sybil 1      8 ... 104
-Sybil 2      8 ... 104
-```
+Voters | Karma
+-------|------
+Voter 1 | 100
+Voter 2 |100
+
+Sybils        | Day 1 | Day 13
+--------------|-------|---------
+Sybil 1 | 8 | 104
+Sybil 2 | 8 | 104
 
 So, on the 13th day there will be a number of sybils even though there was no karma growth of maleficient users and they were only 2 of them. 
 
-User have to have some inception to give feedback more honestly. Let's propose reward system for a fair voting.
+User have to have some inception to give feedback more honestly. Let's propose a reward system for the fair voting.
 
 #### Rewards for the votes
 We need to choose a metric of a good upvote. In a decentralized environment we cannot use some rating center which will define  how the good content should look like. The popularity can be a measure of value of the content for the community. Let's choose *popularity* as main metric of content quality. If actor chooses to upvote some unrated content which is lately upvoted by more user he should be rewarded for it.
@@ -217,14 +216,15 @@ And if the user tries to withdraw his deposit and then put it to the sybil's acc
 It easily can be seen that dominant strategy here is to activily participate in the content rating from the user's main account.
 
 ## Moderation
-(*TODO!!!*)
+The proposed reputation system is not absolutely attack-proof, thus it requires additional regulation mechanisms to adjust user's karma values if community decides that he can be considered maleficient. These moderation functions can be performed only by trustful users with a lot of karma, *the elders*. Moreover, to prevent the situation when of the elders became maleficient or there exists some clique of the elders who decided to *defect* at some point we need to choose the moderators randomly and rotate them periodically.
+Also, to control the moderation process itself we can propose a metamoderator role, which will be able to decline the moderators actions due to some cases.
+
 ### Elders, shamans and chief
 
-Shamans can punish with a lowing coefficient on the few nexts posts or bless with additional labels for the post, chief can decline shamans offers. 
-(*TODO: Can chief punish and reward by himself?*)
+Shamans can punish those who choose to defect with a lowering coefficient on the few nexts posts or bless with additional labels for the post, chief can decline shamans offers. 
 
 ### Turnover of power
-Every week 10 shamans and 1 chief randomly choosen among the elders. If there are not enough elders, number of shamans will be lower.
+Every week 10 shamans and 1 chief are randomly choosen among the elders. If there are not enough elders, number of shamans will be lower.
 
 ## Kudos as a measure of project's quality
 Every voter which proved his trustful status can vote also for the projects (camps). They have amount of **kudos** which is linear function of karma:
