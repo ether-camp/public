@@ -30,8 +30,8 @@ We can consider the reputation growing as a *game* where every user chooses if h
 T > R > P > S
 
 The *dominant strategy* for this game is to *defect*, because it provides the maximum payoff for every player who chooses it. Applying to our case it means that every voter will have rational tendency to rate content unhonestly to maximize his payoff.
-In the case if this game is repeated in N rounds and all actors have memory about prior actions of other participants the *superrational* players can choose another strategy.
-So called Grim strategy is to cooperate with other players unless they defect in previous round. Every superrational player gets a better payoff, because he receiving R in the majority of rounds.
+In the case if this game is repeated in N rounds and all actors have memory about prior actions of other participants the [*superrational*](https://en.wikipedia.org/wiki/Superrationality) players can choose another strategy.
+So called Grim strategy is to cooperate with other players unless they defect in previous round. It easily can be shown that every *superrational& player gets a better payoff, because he receiving R in the majority of rounds.
 
 To make this game sustainable we need at least 2 things:
 - Some metrics of the player behaviour. How often he chooses to defect.
@@ -44,7 +44,7 @@ Let's describe the *karma* as the main metric of player's cooperating behaviour.
 We are creating asymetric reputational function. Therefore, we need to designate some actors subset as trustful and give them rights to rate activity of other actors and reward valuable community members with trustful status.
 Every participant of the system can create a content which can be rated by users with high enough karma. When an author of the comment or post receives some upvotes for his content, he receives karma depending on formula:
 
-`received_karma == (voter_karma) / karma_coefficient`
+`received_karma = (voter_karma) / karma_coefficient`
 
 **karma_coefficient** can be changed in future and equals **25** on the start.
 
