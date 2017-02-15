@@ -157,10 +157,12 @@ The rules for the rewarding are:
 - Upvoting already popular content will not reward you with additional karma
 
 Initial constants are:
+```
 - popular_content_upvotes >= 10
 - first_upvoter_reward = 10 karma
 - max_rewarded_users = 10
 - reward_decrease_step = 1
+```
 
 So, first upvoter of the popular content with 10 or more upvotes receives 10 karma, 10th upvoter gets 1 karma.
 
