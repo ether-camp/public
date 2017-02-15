@@ -1,6 +1,21 @@
 
 # Reputation System for crypto.camp 
 
+- [Reputation System for crypto.camp](#)
+	- [Preface](#)
+	- [Terms](#)
+	- [Motivation](#)
+	- [Prisoners dilemma and transitive trust systems](#)
+	- [Karma gain system](#)
+	- [Known attacks](#)
+	- [Reputation system usecases](#)
+	- [Moderation](#)
+	- [Kudos as a measure of project's quality](#)
+	- [Who pays for the gas](#)
+	- [Notes on technical implementation](#)
+	- [External tools](#)
+	- [References](#)
+
 ## Preface
 hack.ether.camp is a platform which held a virtual accelerator during November and December 2016. Every person was able to support projects with both *Kudos* and *Hacker Gold (HKG)*. *Kudos* were a voting power of a system participant. Any registered person had 10 *Kudos* and they could have up to 210 *Kudos* after linking 2 active social accounts.
 It was a system with minimal constraints, but vulnerable to sybil attacks as long as to massive voting by people who registered just before giving the vote. One of the top camps received more than 87% of the overall votes from newcomers. It means that a lot of voters don't want to choose the best project carefully. They don't want to compare and to produce some value for the community by giving fair reviews and some constructive critics.
