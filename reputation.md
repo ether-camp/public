@@ -140,12 +140,11 @@ Considering a constraint of minimum 2 upvotes for some post to get karma, malefi
 Voters | Karma
 -------|------
 Voter 1 | 100
-Voter 2 |100
+Voter 2 | 100
 
-Sybils        | Day 1 | Day 13
---------------|-------|---------
-Sybil 1 | 8 | 104
-Sybil 2 | 8 | 104
+Sybils / Karma | Day 1 | Day 2 | Day 13
+---------------|-------|-------|-------
+Sybil  | 8 | 16 | 104
 
 So, on the 13th day there will be a number of sybils even though there was no karma growth of maleficient users and they were only 2 of them. 
 
@@ -212,11 +211,13 @@ If the user with deposit tries to get the rewards for good voting, he will recei
 1000 HKG deposit => (2 voters) * (10 karma) * 3 == 60
 5000 HKG deposit => (2 voters) * (10 karma) * 9 == 180
 ```
+
 And if the user tries to withdraw his deposit and then put it to the sybil's account he will receive maximum:
 ```
 1000 HKG => (2 voters) * (4 karma) * 3 == 24 (20 due to limit)
 5000 HKG => (2 voters) * (4 karma) * 9 == 56 (20 due to limit)
 ```
+
 It easily can be seen that dominant strategy here is to activily participate in the content rating from the user's main account.
 
 ## Reputation system usecases
@@ -252,7 +253,6 @@ The proposed reputation system is not absolutely attack-proof, thus it requires 
 Also, to control the moderation process itself we can propose a metamoderator role, which will be able to decline the moderators actions due to some cases.
 
 ### Elders, shamans and chief
-
 Shamans can punish those who choose to defect with a lowering coefficient on the few nexts posts or bless with additional labels for the post, chief can decline shamans offers. 
 
 ### Turnover of power
