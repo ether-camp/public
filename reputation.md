@@ -61,7 +61,7 @@ The roles are:
 ```
 - Newcomer, karma 0-99, max gain daily 20.
 - Voter, karma 100-5000, can vote for the projects and content, max gain daily 100.
-- Elder, karma >5000, can also have some moderation rights.
+- Elder, karma >5000, can also have some moderation rights, max gain daily 300.
 ```
 
 Every normal person starts with 0 karma. It should be quite hard to get a voter status, because newcomers cannot harm the system badly. They only can create a number of spam posts which can be easily hidden by other users if they like. 
@@ -83,6 +83,18 @@ An author of the review receives *50 karma* in the case of *recognition*. All th
 #### Camp owners identity verification
 If any user of the platform can start a camp, therefore there could be fake camps which can be used to take advantage in acquiring the karma.
 Hack.ether.camp is going to be a verification center, which will be able to check if camp and camp owners are real people and they can get the rights to recognize the reviews.
+
+## Reputation system usecases
+
+Receiver | Recogninized project review | Upvote, voter_karma = 100 | Upvote, voter_karma = 400 | Upvote, voter_karma = 5000
+---------------------------------------------------------------------------------------------------------------------------
+Newcomer | 20 | 4 | 16 | 20
+Voter | 50 | 4 | 16 | 100
+Elder | 50 | 4 | 16 | 200
+Newcomer, deposit 1000 HKG | 20 | 12 | 20 | 20
+Voter, deposit 1000 HKG | 100 | 12 | 48 | 100
+Elder, deposit 1000 HKG | 150 | 12 | 48 | 300
+
 
 ## Known attacks
 There is a number of known attacks on reputational systems. For example, every user easily can change his displayable identity, create a number of sybils or give feedback not honestly. 
@@ -136,7 +148,6 @@ Some additional options to consider:
 ### Dishonest feedback
 Every user can post content and receive additional karma for it. Also, he has voting power which can be spread over the posts of other users, because he cannot vote for himself. If there is no reward for honest upvoting good content his dominant strategy will be slowly upvoting sybils.
 Considering a constraint of minimum 2 upvotes for some post to get karma, maleficent *voter* can create another *voter* as sybil or unite with someone to start more sybils growing.
-
 
 Voters | Karma
 -------|------
