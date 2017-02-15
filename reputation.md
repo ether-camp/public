@@ -221,6 +221,14 @@ It easily can be seen that dominant strategy here is to activily participate in 
 
 ## Reputation system usecases
 
+As been described before, three main ways to get the karma are:
+- Get upvotes for the posted content
+- Rate the comment and be among the first 10 upvoters
+- Write the reviews on the project and get recognition from the project owners
+
+Let's summarize how much karma can be received in the different cases. 
+
+### Project reviews and content creation karma
 Receiver | Recogninized project review | Upvote, voter_karma = 100 | Upvote, voter_karma = 400 | Upvote, voter_karma = 5000
 ---------|-----------------------------|---------------------------|---------------------------|---------------------------
 Newcomer | 20 | 4 | 16 | 20
@@ -230,6 +238,7 @@ Newcomer, deposit 1000 HKG | 20 | 12 | 20 | 20
 Voter, deposit 1000 HKG | 100 | 12 | 48 | 100
 Elder, deposit 1000 HKG | 150 | 12 | 48 | 300
 
+### Content rating karma
 Receiver | Upvoted post got < 10 upvotes | Upvoted post got >= 10 upvotes
 ---------|-------------------------------|-------------------------------
 1st upvoter | 0 | 10
