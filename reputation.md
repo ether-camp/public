@@ -76,8 +76,6 @@ In order to create an initial kernel of trustful users we can give some karma to
 Project reviews supposed to be a mechanism which will help to accumulate initial karma value by the community new members. Every user can write a review for any published project. We propose to give the project an option to recognize the review. Review recognition doesn't say that the project agrees with it but it gives some mechanism to encourage reviewers to be constructive in their critics. Any owner of this project can *recognize* the review and make it visible to other community members.
 First review for the particular project can give more karma. It will stimulate to give the reviews for all projects.
 
-(*TODO should the review be hidden before the approve or should there be another tab for unapproved reviews?*). 
-
 An author of the review receives *50 karma* in the case of *recognition*. All the reviews can recieve normal votes from the community after the approval like any other post or comment. First recognized review for the project also receives $60 in HKG equivalent to reward reviewing every project.
 
 #### Camp owners identity verification
