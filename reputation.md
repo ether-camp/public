@@ -2,19 +2,19 @@
 # Reputation System for crypto.camp 
 
 - [Reputation System for crypto.camp](#)
-	- [Preface](#)
-	- [Terms](#)
-	- [Motivation](#)
-	- [Prisoners dilemma and transitive trust systems](#)
-	- [Karma gain system](#)
-	- [Known attacks](#)
-	- [Reputation system usecases](#)
-	- [Moderation](#)
-	- [Kudos as a measure of project's quality](#)
-	- [Who pays for the gas](#)
-	- [Notes on technical implementation](#)
-	- [External tools](#)
-	- [References](#)
+	- [Preface](https://github.com/ether-camp/public/blob/master/reputation.md#preface)
+	- [Terms](https://github.com/ether-camp/public/blob/master/reputation.md#terms)
+	- [Motivation](https://github.com/ether-camp/public/blob/master/reputation.md#motivation)
+	- [Prisoners dilemma and transitive trust systems](https://github.com/ether-camp/public/blob/master/reputation.md#prisoners-dilemma-and-transitive-trust-systems)
+	- [Karma gain system](https://github.com/ether-camp/public/blob/master/reputation.md#karma-gain-system)
+	- [Known attacks](https://github.com/ether-camp/public/blob/master/reputation.md#known-attacks)
+	- [Reputation system usecases](https://github.com/ether-camp/public/blob/master/reputation.md#reputation-system-usecases)
+	- [Moderation](https://github.com/ether-camp/public/blob/master/reputation.md#moderation)
+	- [Kudos as a measure of project's quality](https://github.com/ether-camp/public/blob/master/reputation.md#kudos-as-a-measure-of-projects-quality)
+	- [Who pays for the gas](https://github.com/ether-camp/public/blob/master/reputation.md#who-pays-for-the-gas)
+	- [Notes on technical implementation](https://github.com/ether-camp/public/blob/master/reputation.md#notes-on-technical-implementation)
+	- [External tools](https://github.com/ether-camp/public/blob/master/reputation.md#external-tools)
+	- [References](https://github.com/ether-camp/public/blob/master/reputation.md#references)
 
 ## Preface
 hack.ether.camp is a platform which held a virtual accelerator during November and December 2016. Every person was able to support projects with both *Kudos* and *Hacker Gold (HKG)*. *Kudos* were a voting power of a system participant. Any registered person had 10 *Kudos* and they could have up to 210 *Kudos* after linking 2 active social accounts.
