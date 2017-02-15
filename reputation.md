@@ -84,25 +84,6 @@ An author of the review receives *50 karma* in the case of *recognition*. All th
 If any user of the platform can start a camp, therefore there could be fake camps which can be used to take advantage in acquiring the karma.
 Hack.ether.camp is going to be a verification center, which will be able to check if camp and camp owners are real people and they can get the rights to recognize the reviews.
 
-## Reputation system usecases
-
-Receiver | Recogninized project review | Upvote, voter_karma = 100 | Upvote, voter_karma = 400 | Upvote, voter_karma = 5000
----------|-----------------------------|---------------------------|---------------------------|---------------------------
-Newcomer | 20 | 4 | 16 | 20
-Voter | 50 | 4 | 16 | 100
-Elder | 50 | 4 | 16 | 200
-Newcomer, deposit 1000 HKG | 20 | 12 | 20 | 20
-Voter, deposit 1000 HKG | 100 | 12 | 48 | 100
-Elder, deposit 1000 HKG | 150 | 12 | 48 | 300
-
-Receiver | Upvoted post got < 10 upvotes | Upvoted post got >= 10 upvotes
----------|-------------------------------|-------------------------------
-1st upvoter | 0 | 10
-2nd upvoter | 0 | 9
-3rd upvoter | 0 | 8
-9th upvoter | 0 | 2
-10th upvoter | 0 | 1
-
 ## Known attacks
 There is a number of known attacks on reputational systems. For example, every user easily can change his displayable identity, create a number of sybils or give feedback not honestly. 
 
@@ -237,6 +218,25 @@ And if the user tries to withdraw his deposit and then put it to the sybil's acc
 5000 HKG => (2 voters) * (4 karma) * 9 == 56 (20 due to limit)
 ```
 It easily can be seen that dominant strategy here is to activily participate in the content rating from the user's main account.
+
+## Reputation system usecases
+
+Receiver | Recogninized project review | Upvote, voter_karma = 100 | Upvote, voter_karma = 400 | Upvote, voter_karma = 5000
+---------|-----------------------------|---------------------------|---------------------------|---------------------------
+Newcomer | 20 | 4 | 16 | 20
+Voter | 50 | 4 | 16 | 100
+Elder | 50 | 4 | 16 | 200
+Newcomer, deposit 1000 HKG | 20 | 12 | 20 | 20
+Voter, deposit 1000 HKG | 100 | 12 | 48 | 100
+Elder, deposit 1000 HKG | 150 | 12 | 48 | 300
+
+Receiver | Upvoted post got < 10 upvotes | Upvoted post got >= 10 upvotes
+---------|-------------------------------|-------------------------------
+1st upvoter | 0 | 10
+2nd upvoter | 0 | 9
+3rd upvoter | 0 | 8
+9th upvoter | 0 | 2
+10th upvoter | 0 | 1
 
 ## Moderation
 The proposed reputation system is not absolutely attack-proof, thus it requires additional regulation mechanisms to adjust user's karma values if community decides that he can be considered maleficient. These moderation functions can be performed only by trustful users with a lot of karma, *the elders*. Moreover, to prevent the situation when of the elders became maleficient or there exists some clique of the elders who decided to *defect* at some point we need to choose the moderators randomly and rotate them periodically.
