@@ -95,6 +95,13 @@ Newcomer, deposit 1000 HKG | 20 | 12 | 20 | 20
 Voter, deposit 1000 HKG | 100 | 12 | 48 | 100
 Elder, deposit 1000 HKG | 150 | 12 | 48 | 300
 
+Receiver | Upvoted post got < 10 upvotes | Upvoted post got >= 10 upvotes
+---------|-------------------------------|-------------------------------
+1st upvoter | 0 | 10
+2nd upvoter | 0 | 9
+3rd upvoter | 0 | 8
+9th upvoter | 0 | 2
+10th upvoter | 0 | 1
 
 ## Known attacks
 There is a number of known attacks on reputational systems. For example, every user easily can change his displayable identity, create a number of sybils or give feedback not honestly. 
