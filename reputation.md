@@ -87,7 +87,7 @@ Hack.ether.camp is going to be a verification center, which will be able to chec
 ## Reputation system usecases
 
 Receiver | Recogninized project review | Upvote, voter_karma = 100 | Upvote, voter_karma = 400 | Upvote, voter_karma = 5000
----------------------------------------------------------------------------------------------------------------------------
+---------|-----------------------------|---------------------------|---------------------------|---------------------------
 Newcomer | 20 | 4 | 16 | 20
 Voter | 50 | 4 | 16 | 100
 Elder | 50 | 4 | 16 | 200
