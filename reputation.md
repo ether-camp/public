@@ -138,7 +138,7 @@ However, such reputational function has another flaw. The votes of the new membe
 #### Slowing down sybils growing
 Growing of sybils can be made too slow by additional constraints, which can be:
 - An actor have to get at least 2 upvotes from different users to get a karma for your content. 
-- There can be activity coefficient which will reward constantly high activity, like +2% to karma if there were upvoted content in the last days, up to 10%, or decrease up to 10% if there was no activity in last 5 days.
+- There can be activity coefficient which will reward constantly high activity, like +2% to karma if there were upvoted content in the last days, up to 10%.
 - After 3 days in a row of upvoting specific person by another specific person there should be cooldown for 1 or 2 days. So one user cannot be upvoted too much by single voter or even elder. 
 
 ( *todo: to consider if the 3 days restriction wont harm the constructive behaiviour* )
