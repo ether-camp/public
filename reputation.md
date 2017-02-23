@@ -24,7 +24,7 @@
 
 ## Preface
 hack.ether.camp is a platform which held a virtual accelerator during November and December 2016. Every person was able to support projects with both *Kudos* and *Hacker Gold (HKG)*. *Kudos* were a voting power of a system participant. Any registered person had 10 *Kudos* and they could have up to 210 *Kudos* after linking 2 active social accounts.
-It was a system with minimal constraints, but vulnerable to sybil attacks as long as to massive voting by people who registered just before giving the vote. One of the top camps received more than 87% of the overall votes from newcomers. It means that a lot of voters don't want to choose the best project carefully. They don't want to compare and to produce some value for the community by giving fair reviews and some constructive critics.
+It was a system with minimal constraints, but vulnerable to sybil attacks from massive voting by people who registered just before giving the vote. One of the top camps received more than 87% of the overall votes from newcomers. It means that a lot of voters don't want to choose the best project carefully. They didn't want to compare and produce value for the community by giving fair reviews and some constructive critics.
 We, as authors of the platform, want to change it. Loudest projects are not always the best. So, let's the innovative ideas and implementations win.
 
 ## Terms
@@ -37,8 +37,8 @@ We, as authors of the platform, want to change it. Loudest projects are not alwa
 
 ## Motivation 
 The main goal of system is to create a community of experts which votes for the projects or any other content is trustful. 
-Reputational system can be presented as a graph where nodes are actors of the system and edges are relationships between the actors. Reputational function is called symmetric if reputation depends only on interactions between actors, not on actor's roles and statuses. And asymetric reputational fuction depends both on graph edges weights and on nodes labels.
-On the picture below there is an example of a symmetric and asymetric reputational functions. As can be seen, switching labels on the graph describing asymetric reputational function will also cause changing of the edges weights.
+Reputational system can be presented as a graph where nodes are actors of the system and edges are relationships between the actors. The reputational function is symmetric, if reputation depends only on interactions between actors, not on actor's roles and statuses. The asymetric reputational fuction depends both on graph edges weights and on nodes labels.
+On the picture below there is an example of both symmetric and asymetric reputational functions. As can be seen, switching labels on the graph describing asymetric reputational function will change the weight of the edges.
 
 ![Reputational functions](http://imgur.com/rQi7KeZ.png)
 
@@ -53,9 +53,16 @@ Strategy        | Cooperate	| Defect
 Cooperate | R, R | S, T
 Defect | T, S | P, P
 
-, where T > R > P > S
+Where the condition T > R > P > S must hold for the payoffs, and are defined as follows
 
-The *dominant strategy* for this game is to *defect*, because it provides the maximum payoff for every player who chooses it. Applying to our case it means that every voter will have rational tendency to rate content unhonestly to maximize his payoff.
+P: Punishment payoff
+R: Cooperation reward
+S: Suckers payoff
+T: Tempatation payoff
+
+
+
+The *dominant strategy* for this game is to *defect*, because it provides the maximum payoff for every player who chooses it. Applying to our case it means that every voter will have rational tendency to rate content dishonestly to maximize his payoff.
 In the case if this game is repeated in N rounds and all actors have memory about prior actions of other participants the [*superrational*](https://en.wikipedia.org/wiki/Superrationality) players can choose another strategy.
 So called Grim strategy is to cooperate with other players unless they defect in previous round. It easily can be shown that every *superrational* player gets a better payoff, because he is receiving R in the majority of rounds.
 
@@ -97,7 +104,7 @@ In order to create an initial kernel of trustful users we can give some karma to
 Project reviews supposed to be a mechanism which will help to accumulate initial karma value by the community new members. Every user can write a review for any published project. We propose to give the project an option to recognize the review. Review recognition doesn't say that the project agrees with it but it gives some mechanism to encourage reviewers to be constructive in their critics. Any owner of this project can *recognize* the review and make it visible to other community members.
 First review for the particular project can give more karma. It will stimulate to give the reviews for all projects.
 
-An author of the review receives *50 karma* in the case of *recognition*. All the reviews can recieve normal votes from the community after the approval like any other post or comment. First recognized review for the project also receives $60 in HKG equivalent to reward reviewing every project.
+An author of the review receives *50 karma* in the case of *recognition*. All the reviews can receive normal votes from the community after the approval like any other post or comment. First recognized review for the project also receives $60 in HKG equivalent to reward reviewing every project.
 
 #### Camp owners identity verification
 If any user of the platform can start a camp, therefore there could be fake camps which can be used to take advantage in acquiring the karma.
@@ -110,15 +117,15 @@ There is a number of known attacks on reputational systems. For example, every u
 *Whitewashing* - An entity may acquire a new user and start over with the new reputation list.
 
 #### Preventing whitewashing
-In any online reputational system whitewashing will always be a problem. One of the approaches to prevent it is to require some proof of identity like verified phone number or social account. We are going to build a reputational system for a cryptocurrency community where anonymity is always highly preferable. Also, as it was seen from the second season of *hack.ether.camp* such identities can be easily buyed. We still can use a social account proof of identity as an additional way to show user as more trustful, but it can't be the main way.
+In any online reputational system whitewashing will always be a problem. One of the approaches to prevent it is to require some proof of identity like verified phone number or social account. We are going to build a reputational system for a cryptocurrency community where anonymity is always highly preferable. Also, as it was seen from the second season of *hack.ether.camp* such identities can be easily bought. We still can use a social account proof of identity as an additional way to show user as more trustful, but it can't be the main way.
 Another approach to prevent whitewashing and to force users to stay on their primary account is to make the reputation valuable and hard to acquire. As been shown above in [Transitive trust systems](https://github.com/ether-camp/public/blob/master/reputation.md#prisoners-dilemma-and-transitive-trust-systems) section, users will tend to consider their reputation valuable in a long-term environment. Also, [Karma growing curve](https://github.com/ether-camp/public/blob/master/reputation.md#karma-growing-curve) section describes why it's always harder to grow a new account instead of preserving already developed one.
-The last thing here is the point that every person who got a lot of karma was creating valuable content in the past usually. Even if at some point some user chooses to defect he already produced some value for the community and the harm of his maleficient behavior can be compensated by his content and honest ratings.
+The last thing here is the point that every person who gains significant karma has usually creating valuable content in the past. Even if at some point some user chooses to defect he already produced some value for the community and the harm of his maleficient behavior can be compensated by his content and honest ratings.
 
 ### Sybils attack
 Every user can create additional entities or hire some users who are not interested in platform development and creating quality content.
 
 ### Creating a sybil-proof system
-Main problem here: any voter can decide to start growing an army of sybils, because he has a right to upvote. He cannot vote for himself, but he needs the reasons to give votes fairly and not for his sybils. There are some ways to prevent sybil attacks in this scheme. 
+The main challenge here is that any voter can decide to start growing an army of sybils, because he has a right to upvote. He cannot vote for himself, but he needs the reasons to give votes fairly and not for his sybils. There are some ways to prevent sybil attacks in this scheme. 
 
 #### Provably sybil-proof systems
 As been shown in [Algoritmic game theory](https://github.com/ether-camp/public/blob/master/reputation.md#2-algorithmic-game-theory-nisan-noam-edt-roughgarden-tim-edt-tardos-eva-edt-vazirani-vijay-v-edt-690-693), *PageRank*-like reputational functions are vulnerable to sybil attacks.
@@ -129,32 +136,32 @@ Let G=(V,E) is a graph where nodes are reputational system actors and the weight
 ![Sybil attack on PageRank](http://imgur.com/awCxPkL.png)
 
 *PathRank* is an approach to reputation calculation based on the shortest path. There is a *R* node which is root of the graph. The weight of the edges is an inverted amount of given *karma*. Therefore, we can find total karma value for every node by calculating shortest path between the root and certain node.
-As shown on the picture below, creating additional sybil node cannot affect the shortest path to the maleficient node, , because shorter path will always use edges from more high-ranked actors. *PathRank* can be considered sybil-proof.
+As shown on the picture below, creating additional sybil node cannot affect the shortest path to the maleficient node, because the shorter path will always use edges from more high-ranked actors. *PathRank* can be considered sybil-proof.
 
 ![Shortest path reputational system](http://imgur.com/GwvdGJB.png)
 
-However, such reputational function has another flaw. The votes of the new members cannot impact some user's karma if there were votes from high-rank actors. It becames some kind of *aristocrathy* in the meaning of form of government. It doesn't fits the requirements to build a distributed and democratic system reputation system. So PathRank is not an option. Instead of it we can use an approach which is close to the *PageRank* with some additional constraints to make the sybil attack more problematic for the attacker.
+However, such reputational function has another flaw. The votes of the new members cannot impact some user's karma if there were votes from high-rank actors. It becames some kind of *aristocrathy* much like a form of government. It doesn't fits the requirements to build a distributed and democratic system reputation system. So PathRank is not an option. Instead of it we can use an approach which is close to the *PageRank* with some additional constraints to make the sybil attack more problematic for the attacker.
 
-#### Slowing down sybils growing
-Growing of sybils can be made too slow by additional constraints, which can be:
+#### Slowing down sybils growth
+Growth of sybils can be slowed by additional constraints, which can be:
 - An actor have to get at least 2 upvotes from different users to get a karma for your content. 
-- There can be activity coefficient which will reward constantly high activity, like +2% to karma if there were upvoted content in the last days, up to 10%.
-- After 3 days in a row of upvoting specific person by another specific person there should be cooldown for 1 or 2 days. So one user cannot be upvoted too much by single voter or even elder. 
+- There can be activity coefficient which will reward constantly high activity, like +2% to karma if there was upvoted content in the last days, up to 10%.
+- After 3 days in a row of upvoting specific person by another specific person there should be cooldown period for 1 or 2 days. So one user cannot be upvoted too much by single voter or even elder. 
 
-( *todo: to consider if the 3 days restriction wont harm the constructive behaiviour* )
+( *todo: consider if the 3 days restriction will harm the constructive behaiviour* )
 
-Another way to prevent such attack is rewarding upvotes for the good content. If one actor voted up some content which was upvoted therefore by, for example, 10 or more users, he receives also some amount of karma along with content author. 
+Another way to prevent such attack is rewarding upvotes for the good content. If one actor voted up some content which was upvoted therefore by, for example, 10 or more users, he also receives some karma along with the content author. 
 
 Proof of identity by linking the social accounts, which were used in hack.ether.camp season 2, also can be useful if it's impact is not too big. Social accont link can be some prove of your identity, so it will give you *+5%* to karma grow per each linked account with more than 100 followers.
 
 Some additional options to consider: 
-- Karma growth can be boosted during the first weeks or months after the system launch to help the community grow more intensively.
+- Karma growth can be boosted during the first weeks or months following system launch to help grow the community more intensively.
 - Hide button. If voter considers that some content is spam or offensive, he can press 'Hide' button, so he will not see this comment or post in the future. After getting *(voter_karma) / 25 == 100* the author of content gets a cooldown for karma acquiring for 1 day. (Effect can be worse if he will get more 'spam' flags).
 
 
 ### Dishonest feedback
-Every user can post content and receive additional karma for it. Also, he has voting power which can be spread over the posts of other users, because he cannot vote for himself. If there is no reward for honest upvoting good content his dominant strategy will be slowly upvoting sybils.
-Considering a constraint of minimum 2 upvotes for some post to get karma, maleficent *voter* can create another *voter* as sybil or unite with someone to start more sybils growing.
+Every user can post content and receive additional karma for it. Also, they have voting power which can be spread over the posts of other users, because they cannot vote for themselves. If there is no reward for honest upvoting of good content, a users dominant strategy could be gradual upvoting of sybils.
+Considering a constraint of minimum 2 upvotes for some post to get karma, a maleficent *voter* can create another *voter* as sybil or unite with someone else to get more sybils growing.
 
 Voters | Karma
 -------|------
@@ -167,14 +174,14 @@ Sybil  | 8 | 16 | 104
 
 So, on the 13th day there will be a number of sybils even though there was no karma growth of maleficient users and they were only 2 of them. 
 
-User have to have some inception to give feedback more honestly. Let's propose a reward system for the fair voting.
+User have to have some incentive to give feedback more honestly. Let's propose a reward system for the fair voting.
 
 ### Rewards for the votes
-We need to choose a metric of a good upvote. In a decentralized environment we cannot use some rating center which will define  how the good content should look like. The popularity can be a measure of value of the content for the community. Let's choose *popularity* as main metric of content quality. If actor chooses to upvote some unrated content which is lately upvoted by more user he should be rewarded for it.
+We need to choose a metric of a good upvote. In a decentralized environment we cannot use a rating center that will define how the good content should be. The popularity can be a measure of value of the content for the community. Let's choose *popularity* as main metric of content quality. If actor chooses to upvote some unrated content which has been recently upvoted by more user he should be rewarded for it.
 
-The rules for the rewarding are:
+The rules for the rewards are:
 - There should be minimal quantity of users who upvoted content to consider it popular
-- First upvoter receives maximal reward, reward will decrease for every subsequent upvoter
+- The first upvoter receives the maximum reward, the reward will decrease for every subsequent upvoter
 - Upvoting already popular content will not reward you with additional karma
 
 Initial constants are:
@@ -226,7 +233,7 @@ Therefore, user still have to produce valuable content to get his karma, but if 
 Hack.ether.camp doesn't wants to take these deposits once and forever. It can be easily withdrawed at any moment. But to prevent manipulations with different accounts, every deposit value should be on a particular account at least for *48 hours* to activate it's functions.
 
 #### Attacks using deposit
-As been shown above, it's always more profitable to use deposit as a boost for your main account, except the case when some maleficient user already has a control over at least 2 accounts with *voter* status and he doesn't wants to produce a content anymore. 
+As been shown above, it's always more profitable to use deposit as a boost for your main account, except the case when some maleficient user already has a control over at least 2 accounts with *voter* status and he doesn't want to produce content anymore. 
 If the user with deposit tries to get the rewards for good voting, he will receive for the upvote in the case where he is the first upvoter:
 ```
 1000 HKG deposit => (2 voters) * (10 karma) * 3 == 60
@@ -270,10 +277,10 @@ Receiver | Upvoted post got < 10 upvotes | Upvoted post got >= 10 upvotes
 10th upvoter | 0 | 1
 
 ## Moderation
-The proposed reputation system is not absolutely attack-proof, thus it requires additional regulation mechanisms to adjust user's karma values if community decides that he can be considered maleficient. These moderation functions can be performed only by trustful users with a lot of karma, *the elders*. Moreover, to prevent the situation when of the elders became maleficient or there exists some clique of the elders who decided to *defect* at some point we need to choose the moderators randomly and rotate them periodically.
+The proposed reputation system is not absolutely attack-proof, thus it requires additional regulation mechanisms to adjust user's karma values if the community decides that he can be considered maleficient. These moderation functions can be performed only by trusted users with a lot of karma, *the elders*. Moreover, to prevent the situation when of the elders became maleficient or there exists some clique of the elders who decided to *defect* at some point we need to choose the moderators randomly and rotate them periodically.
 Also, to control the moderation process itself we can propose a metamoderator role, which will be able to decline the moderators actions due to some cases.
 
-### Elders, shamans and chief
+### Elders, shamans and chiefs
 Shamans can punish those who choose to defect with a lowering coefficient on the few nexts posts or bless with additional labels for the post, chief can decline shamans offers. 
 
 ### Turnover of power
@@ -296,9 +303,9 @@ Speaking of implementation of this system it looks that best option will be plug
 
 ## External tools
 
-All contract data is open, so any user is able to analyze the interactions between actors. External social graph analyzing tool can be a good help for an ordinary user who wants to see if there are exist evidences of unfair interaction. E.g. user can see if there are sybil clusters and who is a owner of this cluster. None of this tools can be a automated judge which changes some user karma, but it may advise to do so. 
+All contract data is open, so any user is able to analyze the interactions between actors. External social graph analyzing tool can be useful for an ordinary user who wants to see if there exist evidence of unfair interactions. E.g. user can see if there are sybil clusters and who is an owner of this cluster. None of this tools can be an automated judge which changes some user karma, but it may advise to do so. 
 
-(*TODO what additional tools we can propose?*)
+(*todo what additional tools we can propose?*)
 
 
 ## References
